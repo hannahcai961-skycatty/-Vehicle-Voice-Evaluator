@@ -1,0 +1,35 @@
+# 敏感配置
+.env
+*.local.yml
+
+# 完整数据集（仓库仅含 sample，本地可放全量文件）
+data/input/car_dialogue_dataset_500*.json
+data/input/china_cases_500.txt
+
+# 运行产物
+data/results/
+data/summaries/
+data/analyze/
+logs/
+run.log
+data/failed.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 无关本地文件
+*.xlsx
+
+# 旧版根目录文件（迁移后勿再提交）
+测试运行脚本.py
+汇总报告脚本.py
+car_dialogue_dataset_500_高质量.json
+china_cases_500.txt
+车载模型测试 (3).yml

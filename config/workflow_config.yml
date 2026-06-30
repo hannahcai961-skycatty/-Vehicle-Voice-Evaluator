@@ -1,0 +1,1901 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#E4FBCC'
+  mode: workflow
+  name: Vehicle-Voice-Evaluator
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai_api_compatible:0.0.25@6c02d20ecf7eba40234be5201f25c2b6ea918ec09e0f8eb2a333efb495947d02
+    version: null
+kind: app
+version: 0.5.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: code
+        targetType: llm
+      id: 1773325706236-source-1773370799346-target
+      selected: false
+      source: '1773325706236'
+      sourceHandle: source
+      target: '1773370799346'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: llm
+        targetType: parameter-extractor
+      id: 1773325702448-source-1773644791103-target
+      selected: false
+      source: '1773325702448'
+      sourceHandle: source
+      target: '1773644791103'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: parameter-extractor
+        targetType: code
+      id: 1773644791103-source-1773325706236-target
+      selected: false
+      source: '1773644791103'
+      sourceHandle: source
+      target: '1773325706236'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: llm
+        targetType: parameter-extractor
+      id: 1773370799346-source-1773645875315-target
+      selected: false
+      source: '1773370799346'
+      sourceHandle: source
+      target: '1773645875315'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: parameter-extractor
+        targetType: code
+      id: 1773645875315-source-1773370864689-target
+      selected: false
+      source: '1773645875315'
+      sourceHandle: source
+      target: '1773370864689'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: loop
+      id: 1773304393742-source-1773325502648-target
+      selected: false
+      source: '1773304393742'
+      sourceHandle: source
+      target: '1773325502648'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: code
+        targetType: code
+      id: 1773325697540-source-1773906372738-target
+      selected: false
+      source: '1773325697540'
+      sourceHandle: source
+      target: '1773906372738'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: code
+        targetType: llm
+      id: 1773906372738-source-1773325702448-target
+      selected: false
+      source: '1773906372738'
+      sourceHandle: source
+      target: '1773325702448'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: code
+        targetType: assigner
+      id: 1773370864689-source-1773903767386-target
+      selected: false
+      source: '1773370864689'
+      sourceHandle: source
+      target: '1773903767386'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: loop-start
+        targetType: code
+      id: 1773325502648start-source-1773975018107-target
+      selected: false
+      source: 1773325502648start
+      sourceHandle: source
+      target: '1773975018107'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        sourceType: code
+        targetType: code
+      id: 1773975018107-source-1773325697540-target
+      selected: false
+      source: '1773975018107'
+      sourceHandle: source
+      target: '1773325697540'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: loop
+        targetType: code
+      id: 1773325502648-source-1774002012245-target
+      selected: false
+      source: '1773325502648'
+      sourceHandle: source
+      target: '1774002012245'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1774002012245-source-1774007516724-target
+      source: '1774002012245'
+      sourceHandle: source
+      target: '1774007516724'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1774007516724-source-1774008810733-target
+      source: '1774007516724'
+      sourceHandle: source
+      target: '1774008810733'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1774008810733-source-1774009062177-target
+      source: '1774008810733'
+      sourceHandle: source
+      target: '1774009062177'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: template-transform
+      id: 1774009062177-source-1774010433801-target
+      source: '1774009062177'
+      sourceHandle: source
+      target: '1774010433801'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: llm
+      id: 1774010433801-source-1774010592933-target
+      source: '1774010433801'
+      sourceHandle: source
+      target: '1774010592933'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1774010592933-source-1774010755870-target
+      source: '1774010592933'
+      sourceHandle: source
+      target: '1774010755870'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: loop
+      id: 1773043738942-source-1773325502648-target
+      source: '1773043738942'
+      sourceHandle: source
+      target: '1773325502648'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1773043584052-source-1773043738942-target
+      source: '1773043584052'
+      sourceHandle: source
+      target: '1773043738942'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1773043584052-source-1774618631356-target
+      source: '1773043584052'
+      sourceHandle: source
+      target: '1774618631356'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1774618631356-source-1773304393742-target
+      source: '1774618631356'
+      sourceHandle: source
+      target: '1773304393742'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: []
+          hint: ''
+          label: test_cases
+          max_length: 10000000000000
+          options: []
+          placeholder: ''
+          required: true
+          type: paragraph
+          variable: test_cases
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          hint: ''
+          label: query
+          max_length: 1000000000000000
+          options: []
+          placeholder: ''
+          required: true
+          type: paragraph
+          variable: query
+        - default: ''
+          hint: ''
+          label: Case_ID
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: true
+          type: text-input
+          variable: Case_ID
+        - default: ''
+          hint: ''
+          label: Conv_ID
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: true
+          type: text-input
+          variable: Conv_ID
+      height: 187
+      id: '1773043584052'
+      position:
+        x: 328.13945255649827
+        y: 209.74548689188805
+      positionAbsolute:
+        x: 328.13945255649827
+        y: 209.74548689188805
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\n\ndef main(test_cases: str) -> dict:\n    try:\n     \
+          \   # 去掉首尾多余的引号（CSV双重转义导致）\n        cleaned = test_cases.strip('\"')\n \
+          \       # 把 \"\" 还原成 \"\n        cleaned = cleaned.replace('\"\"', '\"')\n\
+          \        # 解析成对象\n        case_obj = json.loads(cleaned)\n        return\
+          \ {\n            \"case\": case_obj,\n            \"case_id\": case_obj.get(\"\
+          case_id\", \"\"),\n            \"error\": \"\"\n        }\n    except Exception\
+          \ as e:\n        return {\n            \"case\": {},\n            \"case_id\"\
+          : \"\",\n            \"error\": str(e)\n        }"
+        code_language: python3
+        outputs:
+          case:
+            children: null
+            type: object
+          case_id:
+            children: null
+            type: string
+          error:
+            children: null
+            type: string
+        selected: false
+        title: 提取case
+        type: code
+        variables:
+        - value_selector:
+          - '1773043584052'
+          - test_cases
+          value_type: string
+          variable: test_cases
+      height: 52
+      id: '1773043738942'
+      position:
+        x: 964.6171690133253
+        y: 140.24599493766806
+      positionAbsolute:
+        x: 964.6171690133253
+        y: 140.24599493766806
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(data_dict: list) -> dict:\n    import json\n    \n    # 1.\
+          \ 处理字符串输入\n    if isinstance(data_dict, str):\n        try:\n          \
+          \  query_data = json.loads(data_dict)\n        except json.JSONDecodeError:\n\
+          \            query_data = []\n    else:\n        query_data = data_dict\n\
+          \    \n    # 2. 解包列表：如果最外层是列表，取第一个元素看看结构\n    # 目的：处理 [ { \"turns\": [...]\
+          \ } ] 这种情况\n    temp_item = None\n    if isinstance(query_data, list) and\
+          \ len(query_data) > 0:\n        temp_item = query_data[0]\n    \n    # 3.\
+          \ 【核心逻辑】判断数据结构类型\n    final_turns = []\n    \n    # 情况 A：输入直接就是 turns 列表\
+          \ (你提供的最新数据格式)\n    # 特征：query_data 是列表，且第一个元素里有 \"turn\" 字段\n    if isinstance(query_data,\
+          \ list) and len(query_data) > 0:\n        first_item = query_data[0]\n \
+          \       if isinstance(first_item, dict) and \"turn\" in first_item:\n  \
+          \          final_turns = query_data\n        # 情况 B：输入是包裹了一层对象的结构 [ { \"\
+          turns\": [...] } ]\n        elif isinstance(first_item, dict) and \"turns\"\
+          \ in first_item:\n            final_turns = first_item.get(\"turns\", [])\n\
+          \            \n    # 情况 C：输入已经是字典对象 { \"turns\": [...] }\n    elif isinstance(query_data,\
+          \ dict):\n        final_turns = query_data.get(\"turns\", [])\n        \n\
+          \    # 4. 确保提取到的是列表\n    if not isinstance(final_turns, list):\n       \
+          \ final_turns = []\n    \n    # 5. 排序：按 \"turn\" 字段数字从小到大排序\n    sorted_turns\
+          \ = sorted(\n        final_turns, \n        key=lambda x: x.get(\"turn\"\
+          , 0) if isinstance(x, dict) else 0\n    )\n    \n    return {\n        \"\
+          turns\": sorted_turns,\n        \"total_turns\": len(sorted_turns),\n  \
+          \      \"con_history\": [{}],\n        \"results\": [{}]\n    }\n"
+        code_language: python3
+        outputs:
+          con_history:
+            children: null
+            type: array[object]
+          results:
+            children: null
+            type: array[object]
+          total_turns:
+            children: null
+            type: number
+          turns:
+            children: null
+            type: array[object]
+        selected: false
+        title: 提取turns数组
+        type: code
+        variables:
+        - value_selector:
+          - '1774618631356'
+          - data_dict
+          value_type: array[object]
+          variable: data_dict
+      height: 52
+      id: '1773304393742'
+      position:
+        x: 1037.6161901260693
+        y: 348.4753187282466
+      positionAbsolute:
+        x: 1037.6161901260693
+        y: 348.4753187282466
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        break_conditions:
+        - comparison_operator: ≥
+          id: 688990ec-b9a1-40a0-8d37-6af71718e5c9
+          numberVarType: variable
+          value: '{{#1773304393742.total_turns#}}'
+          varType: number
+          variable_selector:
+          - '1773325502648'
+          - current_turn_index
+        error_handle_mode: terminated
+        height: 416
+        logical_operator: and
+        loop_count: 22
+        loop_variables:
+        - id: 57f4f49d-f6c5-4aa1-9512-4ee9cd5d95b3
+          label: current_turn_index
+          value: '0'
+          value_type: constant
+          var_type: number
+        - id: 679bc289-2c80-4068-a26f-fac5fc2701a8
+          label: con
+          value:
+          - '1773304393742'
+          - con_history
+          value_type: variable
+          var_type: array[object]
+        - id: 10873787-5a50-4f10-bb00-55ca9db92d21
+          label: results
+          value:
+          - '1773304393742'
+          - results
+          value_type: variable
+          var_type: array[object]
+        selected: false
+        start_node_id: 1773325502648start
+        title: 循环
+        type: loop
+        width: 1332
+      height: 416
+      id: '1773325502648'
+      position:
+        x: 1455.4632047761245
+        y: 223.33711027999442
+      positionAbsolute:
+        x: 1455.4632047761245
+        y: 223.33711027999442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1332
+      zIndex: 1
+    - data:
+        desc: ''
+        isInLoop: true
+        selected: false
+        title: ''
+        type: loop-start
+      draggable: false
+      height: 48
+      id: 1773325502648start
+      parentId: '1773325502648'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 1479.4632047761245
+        y: 291.3371102799944
+      selectable: false
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-loop-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: "def main(turns: list, current_turn_index: int) -> dict:\n    import\
+          \ json\n    \n    index = int(current_turn_index)\n    \n    current_turn\
+          \ = turns[index]\n    if isinstance(current_turn, str):\n        current_turn\
+          \ = json.loads(current_turn)\n    \n    return {\n        \"current_turn_number\"\
+          : current_turn.get(\"turn\"),\n        \"current_user_query\": current_turn.get(\"\
+          user_query\", \"\"),\n        \"ground_truth_intent\": current_turn.get(\"\
+          ground_truth_intent\", \"\"),\n        \"ground_slots\": current_turn.get(\"\
+          ground_slots\", {}),\n        \"reference\": current_turn.get(\"reference\"\
+          , \"\")\n    }"
+        code_language: python3
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        outputs:
+          current_turn_number:
+            children: null
+            type: number
+          current_user_query:
+            children: null
+            type: string
+          ground_slots:
+            children: null
+            type: object
+          ground_truth_intent:
+            children: null
+            type: string
+          reference:
+            children: null
+            type: string
+        selected: false
+        title: turn拆解
+        type: code
+        variables:
+        - value_selector:
+          - '1773325502648'
+          - current_turn_index
+          value_type: string
+          variable: current_turn_index
+        - value_selector:
+          - '1773304393742'
+          - turns
+          value_type: array[object]
+          variable: turns
+      height: 52
+      id: '1773325697540'
+      parentId: '1773325502648'
+      position:
+        x: 110.75374920501554
+        y: 199.26725446497443
+      positionAbsolute:
+        x: 1566.21695398114
+        y: 422.60436474496885
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1773906372738'
+          - history
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen3-vl-flash
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: ba10cad2-0bae-4652-8049-8edab3e6a4ba
+          role: system
+          text: "你是车载语音助手的意图识别模块。\n只负责分析用户意图和提取槽位信息，不需要回答用户问题。\n【intent枚举列表】\nintent指意图，必须从以下列表中选择，多个意图用+连接：\n\
+            - vehicle_basic_info：查询车辆基本信息（品牌/车型/颜色/年份/车牌/VIN）/\n- real_time_vehicle_status：查询车辆实时状态（车速/电量/空调温度/胎压/油量）\n\
+            - location_and_navigation：查询位置导航相关（当前位置/目的地/途经点/距离/ETA/添加或取消途经点）\n- time_and_schedule：查询时间日程相关（当前时间/日期/提醒事项/预计到达时间）\n\
+            - user_preference_and_habit：涉及用户偏好和习惯（咖啡偏好/音乐偏好/路线偏好/座椅温度）\n- cabin_perception：外部信息查询（天气/气温/空气质量/路况/未读消息）\n\
+            - entertainment_media：媒体娱乐相关（当前歌曲/歌手/播放列表/电台）\n- communication:通信通讯（电话查询类型/联系人信息/电话号码/电话前缀）\n\
+            - cabin_internal_perception：车机系统相关（系统通知/OTA更新/停车状态）\n- safety_assist：安全驾驶相关（安全辅助开关/系统可用性）\n\
+            \n【各intent对应的slots抽取规则】\n-cabin_internal_perception：{gender / age / safety_seats\
+            \ / non_dangerous_behavior / emotion}\n\n-cabin_perception：{weather.type\
+            \ / visibility / road_surface.type / temperature_celsius / wind_speed_kmh}\n\
+            \n-vehicle_basic_info：{vehicle_id / vehicle_model}\n\n-real_time_vehicle_status：{ac.target_function\
+            \ / ac.position / windows.target_function / windows_status / speed_kmh\
+            \ / range_remaining_km / light_status / ac_temperature_setting_celsius\
+            \ / ventilation_mode}\n\n-location_and_navigation：{destination / destination_name\
+            \ / destination_type / distance_to_destination_km / time_to_destination_minutes\
+            \ / route_total_distance_km / distance_traveled_km / waypoint / poi_search_results\
+            \ / traffic_condition / traffic_event}\n\n-time_and_schedule：{schedule.event\
+            \ / schedule.date / schedule.location / schedule_type / schedule_status\
+            \ / reminder_time_minutes_before / is_working_day / is_holiday}\n\n-user_preference_and_habit：{user_id\
+            \ / preferred_driving_style / preferred_ac_temperature_celsius / preferred_ventilation_mode\
+            \ / preferred_music_genres / preferred_radio_stations / preferred_podcasts\
+            \ / preferred_audiobooks / work_location / home_location}\n\n-communication：{phone.search_type\
+            \ / phone.person / phone.telephone / phone.phone_prefix / phone.phone_suffix\
+            \ / incoming_call_display / incoming_call_timestamp}\n\n-entertainment_media：{audio.target_function\
+            \ / audio.position / audio.set_type / audio.value / current_media_type\
+            \ / current_track_title / current_track_artist / volume_level_percent\
+            \ / dark_mode_enabled / screen_brightness_percent / preferred_streaming_platform\
+            \ / spatial_audio_mode / mood_based_music / drive_scene_audio_boost /\
+            \ music_behavior_on_call / nav_music_mix_mode}\n\n-safety_assist：{safety_assist_enabled\
+            \ / safety_assist_available / lka_enabled / ldw_enabled / lane_offset\
+            \ / acc_enabled / acc_speed_kmh / acc_distance_level / front_vehicle_distance_m\
+            \ / aeb_enabled / collision_risk_level / aeb_triggered / driver_fatigue_level\
+            \ / driver_distraction / safety_warning / warning_level / takeover_required\
+            \ / risk_type}\n【历史上下文】\n{{#context#}}\n【输出规则】\n- 只输出JSON，不输出任何其他内容\n\
+            - slots只抽取用户query中明确涉及的字段，没有的字段不要填\n- 结合判断用户意图，并在slots中解析为具体值\n- 输出的conversation_history须在输入的conversation_history基础上追加当前轮，追加格式如下：{\n\
+            \  \"current_turn\": <当前轮次编号，从1开始递增>,\n  \"user_query\": \"<本轮用户原始输入>\"\
+            ,\n  \"assistant_response\": \"<由下游模块填入，当前轮置为空字符串>\"\n}\n\n严格按照以下JSON格式输出：\n\
+            {\n  \"intent\": \"从上方列表选择，多个用+连接\",\n  \"slots\": {},\n  \"conversation_history\"\
+            : [\n    {\n      \"current_turn\": 1,\n      \"user_query\": \"历史轮用户输入\"\
+            ,\n      \"assistant_response\": \"历史轮助手回复\"\n    },\n    {\n      \"\
+            current_turn\": 2,\n      \"user_query\": \"本轮用户输入\",\n      \"assistant_response\"\
+            : \"\"\n    }\n  ]\n}"
+        - id: ac00d0d3-d489-4650-ae4f-3d873f0d0a4f
+          role: user
+          text: '【当前用户说】
+
+            {{#1773325697540.current_user_query#}}'
+        selected: false
+        structured_output_enabled: true
+        title: LLM 1
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1773325702448'
+      parentId: '1773325502648'
+      position:
+        x: 426.1616034335027
+        y: 168.5548151101096
+      positionAbsolute:
+        x: 1881.6248082096272
+        y: 391.891925390104
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "def main(llm1_text: str, selected_case) -> dict:\n    import json\n\
+          \    import re\n\n    # 解析LLM1输出\n    parsed = {}\n    try:\n        json_match\
+          \ = re.search(r'\\{[\\s\\S]*\\}', llm1_text)\n        if json_match:\n \
+          \           parsed = json.loads(json_match.group())\n    except:\n     \
+          \   parsed = {\"intent\": \"\", \"slots\": {}}\n\n    predicted_intent =\
+          \ parsed.get(\"intent\", \"\")\n    predicted_slots = parsed.get(\"slots\"\
+          , {})\n\n    # 处理selected_case类型\n    if isinstance(selected_case, str):\n\
+          \        case_data = json.loads(selected_case)\n    else:\n        case_data\
+          \ = selected_case\n\n    # 把entities数组转成category为key的dict\n    entity_map\
+          \ = {}\n    for entity in case_data.get(\"entities\", []):\n        category\
+          \ = entity.get(\"category\")\n        if category:\n            entity_map[category]\
+          \ = entity.get(\"value\", {})\n\n    # intent到模块的映射\n    intent_module_map\
+          \ = {\n        \"vehicle_basic\": \"vehicle_basic\",\n        \"real_time_status\"\
+          : \"real_time_status\",\n        \"location_navigation\": \"location_navigation\"\
+          ,\n        \"time_schedule\": \"time_schedule\",\n        \"user_preference\"\
+          : \"user_preference\",\n        \"external_notification\": \"external_notification\"\
+          ,\n        \"entertainment_media\": \"entertainment_media\",\n        \"\
+          system_assist\": \"system_assist\",\n        \"safety_assist\": \"safety_assist\"\
+          \n    }\n\n    # slots里attribute字段到模块字段的映射\n    attribute_field_map = {\n\
+          \        # real_time_status\n        \"battery_level\": (\"real_time_status\"\
+          , \"battery_level\"),\n        \"current_speed\": (\"real_time_status\"\
+          , \"current_speed\"),\n        \"ac_temp\": (\"real_time_status\", \"ac_temp\"\
+          ),\n        \"tire_pressure_status\": (\"real_time_status\", \"tire_pressure_status\"\
+          ),\n        \"fuel_level\": (\"real_time_status\", \"fuel_level\"),\n  \
+          \      # time_schedule\n        \"current_time\": (\"time_schedule\", \"\
+          current_time\"),\n        \"current_date\": (\"time_schedule\", \"current_date\"\
+          ),\n        \"trip_eta\": (\"time_schedule\", \"trip_eta\"),\n        \"\
+          reminder\": (\"time_schedule\", \"reminder\"),\n        # vehicle_basic\n\
+          \        \"brand\": (\"vehicle_basic\", \"brand\"),\n        \"model\":\
+          \ (\"vehicle_basic\", \"model\"),\n        \"color\": (\"vehicle_basic\"\
+          , \"color\"),\n        \"year\": (\"vehicle_basic\", \"year\"),\n      \
+          \  \"license_plate\": (\"vehicle_basic\", \"license_plate\"),\n        \"\
+          vin\": (\"vehicle_basic\", \"vin_snippet\"),\n        # location_navigation\n\
+          \        \"current_poi\": (\"location_navigation\", \"current_poi\"),\n\
+          \        \"destination_poi\": (\"location_navigation\", \"destination_poi\"\
+          ),\n        \"distance\": (\"location_navigation\", \"distance\"),\n   \
+          \     # user_preference\n        \"coffee\": (\"user_preference\", \"preferred_coffee\"\
+          ),\n        \"music\": (\"user_preference\", \"preferred_music_genre\"),\n\
+          \        \"route\": (\"user_preference\", \"favorite_route\"),\n       \
+          \ \"seat_temp\": (\"user_preference\", \"seat_temp_preference\"),\n    \
+          \    # external_notification\n        \"weather\": (\"external_notification\"\
+          , \"weather\"),\n        \"temperature_outside\": (\"external_notification\"\
+          , \"temperature_outside\"),\n        \"air_quality\": (\"external_notification\"\
+          , \"air_quality\"),\n        \"traffic_status\": (\"external_notification\"\
+          , \"traffic_status\"),\n        \"unread_messages\": (\"external_notification\"\
+          , \"unread_messages\"),\n        # entertainment_media\n        \"current_song\"\
+          : (\"entertainment_media\", \"current_song\"),\n        \"current_artist\"\
+          : (\"entertainment_media\", \"current_artist\"),\n        \"playlist_name\"\
+          : (\"entertainment_media\", \"playlist_name\"),\n        \"radio_station\"\
+          : (\"entertainment_media\", \"radio_station\"),\n        # system_assist\n\
+          \        \"system_notification\": (\"system_assist\", \"system_notification\"\
+          ),\n        \"ota_update_status\": (\"system_assist\", \"ota_update_status\"\
+          ),\n        \"parking_spot_status\": (\"system_assist\", \"parking_spot_status\"\
+          ),\n        # safety_assist\n        \"error_code\": (\"safety_assist\"\
+          , \"error_code\"),\n        \"adas_status\": (\"safety_assist\", \"adas_status\"\
+          ),\n        \"seatbelt_status\": (\"safety_assist\", \"seatbelt_status\"\
+          ),\n    }\n\n    retrieved = {}\n\n    # 优先根据slots里的attribute精准抽取字段\n  \
+          \  attribute = predicted_slots.get(\"attribute\", \"\")\n    if attribute\
+          \ and attribute in attribute_field_map:\n        module, field = attribute_field_map[attribute]\n\
+          \        if module in entity_map and field in entity_map[module]:\n    \
+          \        retrieved[attribute] = entity_map[module][field]\n\n    # 对于非attribute类槽位（poi_type/action/destination/relation等）\n\
+          \    # 根据intent返回整个模块（因为需要完整导航数据支撑回答）\n    if not retrieved:\n        intents\
+          \ = [i.strip() for i in predicted_intent.replace(\"，\", \",\").split(\"\
+          +\")]\n        for intent in intents:\n            module = intent_module_map.get(intent)\n\
+          \            if module and module in entity_map:\n                retrieved[module]\
+          \ = entity_map[module]\n\n    if not retrieved:\n        retrieved_text\
+          \ = \"未检索到相关车辆数据\"\n    else:\n        retrieved_text = json.dumps(retrieved,\
+          \ ensure_ascii=False, indent=2)\n\n    return {\n        \"retrieved_data\"\
+          : retrieved_text,\n        \"predicted_intent\": predicted_intent,\n   \
+          \     \"predicted_slots\": json.dumps(predicted_slots, ensure_ascii=False),\n\
+          \    }"
+        code_language: python3
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        outputs:
+          predicted_intent:
+            children: null
+            type: string
+          predicted_slots:
+            children: null
+            type: string
+          retrieved_data:
+            children: null
+            type: string
+        selected: false
+        title: 抽取数据
+        type: code
+        variables:
+        - value_selector:
+          - '1773325702448'
+          - text
+          value_type: string
+          variable: llm1_text
+        - value_selector:
+          - '1773043738942'
+          - case
+          value_type: object
+          variable: selected_case
+      height: 52
+      id: '1773325706236'
+      parentId: '1773325502648'
+      position:
+        x: 708.7456027779219
+        y: 65
+      positionAbsolute:
+        x: 2164.2088075540464
+        y: 288.3371102799944
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen3-vl-flash
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 20ba9d32-7f83-482f-83b1-df1758ce1145
+          role: system
+          text: "你是智能车载语音助手，负责根据已检索到的车辆数据回答用户问题。\n【已检索到的相关数据】 {{#1773325706236.retrieved_data#}}\n\
+            【上下文内容】 {{#1773644791103.con_LLM1#}}\n【输出要求】\n- 用自然语言回答用户当前轮次的问题，语气自然简洁，符合车载场景\n\
+            - 输出text格式如下：\n{\n  \"conversation_history\": [\n    {\n      \"current_turn\"\
+            : 1,\n      \"user_query\": \"用户问题\",\n      \"assistant_response\": \"\
+            助手回答\"\n    }\n  ]\n}"
+        - id: 9c73d2cd-77eb-4808-b69c-8971636eabad
+          role: user
+          text: '【当前用户说】
+
+            {{#1773325697540.current_user_query#}}'
+        selected: false
+        structured_output_enabled: true
+        title: LLM 2
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1773370799346'
+      parentId: '1773325502648'
+      position:
+        x: 711.2082464295172
+        y: 169.5837921321961
+      positionAbsolute:
+        x: 2166.6714512056415
+        y: 392.9209024121905
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "def main(predicted_intent: str, predicted_slots: str,\n         current_user_query:\
+          \ str, ground_truth_intent: str, ground_slots,\n         current_turn_index:\
+          \ int, con_LLM2: str, results: list) -> dict:\n    import json\n\n    def\
+          \ flatten_keys(d, result=None):\n        if result is None:\n          \
+          \  result = {}\n        for k, v in d.items():\n            if isinstance(v,\
+          \ dict):\n                flatten_keys(v, result)\n            else:\n \
+          \               result[k] = v\n        return result\n\n    def deep_parse(val):\n\
+          \        for _ in range(5):\n            if isinstance(val, (list, dict)):\n\
+          \                break\n            if isinstance(val, str):\n         \
+          \       try:\n                    val = json.loads(val)\n              \
+          \  except:\n                    break\n        return val\n\n    index =\
+          \ int(current_turn_index)\n    current_turn_num = index + 1\n\n    # =====\
+          \ 解析 con_LLM2，取当前轮 assistant_response =====\n    raw = deep_parse(con_LLM2)\n\
+          \    if isinstance(raw, dict):\n        history = raw.get(\"conversation_history\"\
+          , [])\n    elif isinstance(raw, list):\n        history = raw\n    else:\n\
+          \        history = []\n\n    answer = \"\"\n    if history:\n        last\
+          \ = history[-1]\n        if isinstance(last, dict):\n            answer\
+          \ = last.get(\"assistant_response\", \"\")\n        history[-1][\"current_turn\"\
+          ] = current_turn_num\n\n    answer = str(answer).strip()\n\n    # =====\
+          \ 处理 ground_slots =====\n    if isinstance(ground_slots, str):\n       \
+          \ try:\n            ground_slots_dict = json.loads(ground_slots)\n     \
+          \   except:\n            ground_slots_dict = {}\n    else:\n        ground_slots_dict\
+          \ = ground_slots if ground_slots else {}\n\n    # 有 attribute 则取 attribute\
+          \ 的值作为槽位名，否则取所有 key\n    if \"attribute\" in ground_slots_dict:\n      \
+          \  raw_attr = str(ground_slots_dict[\"attribute\"])\n        required_slots\
+          \ = [s.strip() for s in raw_attr.split(\"/\") if s.strip()]\n        ground_display\
+          \ = {s: None for s in required_slots}\n    else:\n        required_slots\
+          \ = list(ground_slots_dict.keys())\n        ground_display = ground_slots_dict\n\
+          \n    # ===== 处理 predicted_slots =====\n    if isinstance(predicted_slots,\
+          \ str):\n        try:\n            predicted_slots_dict = json.loads(predicted_slots)\n\
+          \        except:\n            predicted_slots_dict = {}\n    else:\n   \
+          \     predicted_slots_dict = predicted_slots if predicted_slots else {}\n\
+          \n    predicted_slots_flat = flatten_keys(predicted_slots_dict)\n\n    #\
+          \ ===== Intent 评估 =====\n    intent_zh_to_en = {\n        \"查询时间\": \"time_schedule\"\
+          ,\n        \"查询日程\": \"time_schedule\",\n        \"查询车辆状态\": \"real_time_status\"\
+          ,\n        \"查询车辆基本信息\": \"vehicle_basic\",\n        \"查询途经点\": \"location_navigation\"\
+          ,\n        \"查询导航\": \"location_navigation\",\n        \"添加途经点\": \"location_navigation\"\
+          ,\n        \"取消途经点\": \"location_navigation\",\n        \"继续导航\": \"location_navigation\"\
+          ,\n        \"偏好地点\": \"user_preference\",\n        \"查询天气\": \"external_notification\"\
+          ,\n        \"查询路况\": \"external_notification\",\n        \"播放音乐\": \"entertainment_media\"\
+          ,\n        \"系统设置\": \"system_assist\",\n        \"安全查询\": \"safety_assist\"\
+          \n    }\n\n    ground_intents_raw = [g.strip() for g in ground_truth_intent.replace(\"\
+          ，\", \",\").split(\"+\")]\n    ground_intents_en = set()\n    for g in ground_intents_raw:\n\
+          \        mapped = intent_zh_to_en.get(g)\n        ground_intents_en.add(mapped\
+          \ if mapped else g)\n\n    predicted_intents = set([p.strip() for p in predicted_intent.replace(\"\
+          ，\", \",\").split(\"+\")])\n\n    intent_hit = len(ground_intents_en & predicted_intents)\
+          \ > 0\n    intent_precision = round(len(ground_intents_en & predicted_intents)\
+          \ / len(predicted_intents), 2) if predicted_intents else 0\n    intent_recall\
+          \ = round(len(ground_intents_en & predicted_intents) / len(ground_intents_en),\
+          \ 2) if ground_intents_en else 0\n\n    # ===== Slot 评估 =====\n    slot_hits\
+          \ = {}\n    slot_misses = {}\n\n    for slot_key in required_slots:\n  \
+          \      if slot_key in predicted_slots_flat:\n            slot_hits[slot_key]\
+          \ = {\n                \"ground\": ground_display.get(slot_key),\n     \
+          \           \"predicted\": predicted_slots_flat[slot_key]\n            }\n\
+          \        else:\n            slot_misses[slot_key] = ground_display.get(slot_key)\n\
+          \n    slot_f1 = round(len(slot_hits) / len(required_slots), 2) if required_slots\
+          \ else 1.0\n\n    # ===== 结构化 turn 结果 =====\n    turn_result = {\n     \
+          \   \"turn\": current_turn_num,\n        \"user_query\": current_user_query,\n\
+          \        \"intent\": {\n            \"ground\": ground_truth_intent,\n \
+          \           \"predicted\": predicted_intent,\n            \"correct\": intent_hit,\n\
+          \            \"precision\": intent_precision,\n            \"recall\": intent_recall\n\
+          \        },\n        \"slots\": {\n            \"ground\": ground_display,\n\
+          \            \"predicted\": predicted_slots_dict,\n            \"hits\"\
+          : slot_hits,\n            \"misses\": slot_misses,\n            \"f1\":\
+          \ slot_f1\n        },\n        \"llm_answer\": answer\n    }\n\n    # =====\
+          \ 更新 results =====\n    results_list = results if isinstance(results, list)\
+          \ else []\n    results_list.append(turn_result)\n    results_list = [r for\
+          \ r in results_list if r and r != {}]\n    con_end = [c for c in history\
+          \ if c and c != {}]\n\n    return {\n    \"con_end\": [history[-1]] if history\
+          \ else [],  # 只返回最后一条\n    \"results_end\": [turn_result],\n    \"current_turn_index\"\
+          : current_turn_num\n}"
+        code_language: python3
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        outputs:
+          con_end:
+            children: null
+            type: array[object]
+          current_turn_index:
+            children: null
+            type: number
+          results_end:
+            children: null
+            type: array[object]
+        selected: false
+        title: 收集数据结果
+        type: code
+        variables:
+        - value_selector:
+          - '1773325706236'
+          - predicted_intent
+          value_type: string
+          variable: predicted_intent
+        - value_selector:
+          - '1773325706236'
+          - predicted_slots
+          value_type: string
+          variable: predicted_slots
+        - value_selector:
+          - '1773325697540'
+          - current_user_query
+          value_type: string
+          variable: current_user_query
+        - value_selector:
+          - '1773325697540'
+          - ground_truth_intent
+          value_type: string
+          variable: ground_truth_intent
+        - value_selector:
+          - '1773325697540'
+          - ground_slots
+          value_type: object
+          variable: ground_slots
+        - value_selector:
+          - '1773325502648'
+          - current_turn_index
+          value_type: string
+          variable: current_turn_index
+        - value_selector:
+          - '1773325502648'
+          - results
+          value_type: array[object]
+          variable: results
+        - value_selector:
+          - '1773645875315'
+          - con_LLM2
+          value_type: string
+          variable: con_LLM2
+      height: 52
+      id: '1773370864689'
+      parentId: '1773325502648'
+      position:
+        x: 1009.5061372193491
+        y: 65
+      positionAbsolute:
+        x: 2464.9693419954738
+        y: 288.3371102799944
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        instruction: "# 代码1：提取 conversation_history\ndef main(text: str) -> dict:\n\
+          \    import json\n    import re\n\n    try:\n        json_match = re.search(r'\\\
+          {[\\s\\S]*\\}', text)\n        if json_match:\n            parsed = json.loads(json_match.group())\n\
+          \        else:\n            return {\"error\": \"未找到JSON内容\", \"conversation_history\"\
+          : \"[]\"}\n\n        con_LLM1 = parsed.get(\"conversation_history\", [])\n\
+          \n        return {\n            \"error\": \"\",\n            \"conversation_history\"\
+          : json.dumps(con_LLM1, ensure_ascii=False)\n        }\n\n    except Exception\
+          \ as e:\n        return {\"error\": str(e), \"conversation_history\": \"\
+          []\"}"
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-5.2
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        parameters:
+        - description: 将LLM1的输出变量text中的conversation_history提取出来
+          name: con_LLM1
+          required: false
+          type: string
+        query:
+        - '1773325702448'
+        - text
+        reasoning_mode: prompt
+        selected: false
+        title: 参数提取器 1
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 88
+      id: '1773644791103'
+      parentId: '1773325502648'
+      position:
+        x: 426.7518057337586
+        y: 304.7620773511243
+      positionAbsolute:
+        x: 1882.215010509883
+        y: 528.0991876311186
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        instruction: "def main(text: str) -> dict:\n    import json\n    import re\n\
+          \n    try:\n        json_match = re.search(r'\\{[\\s\\S]*\\}', text)\n \
+          \       if json_match:\n            parsed = json.loads(json_match.group())\n\
+          \        else:\n            return {\"error\": \"未找到JSON内容\", \"con_LLM2\"\
+          : \"[]\"}\n\n        history_list = parsed.get(\"conversation_history\"\
+          , [])\n\n        result = {\n            \"conversation_history\": history_list\n\
+          \        }\n\n        return {\n            \"error\": \"\",\n         \
+          \   \"con_LLM2\": json.dumps(result, ensure_ascii=False)\n        }\n\n\
+          \    except Exception as e:\n        return {\"error\": str(e), \"con_LLM2\"\
+          : \"[]\"}"
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-5.2
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        parameters:
+        - description: 将LLM2的text中的conversation_history提取出来
+          name: con_LLM2
+          required: false
+          type: string
+        query:
+        - '1773370799346'
+        - text
+        reasoning_mode: prompt
+        selected: true
+        title: 参数提取器 2
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 88
+      id: '1773645875315'
+      parentId: '1773325502648'
+      position:
+        x: 705.4544289249152
+        y: 303.41408522073095
+      positionAbsolute:
+        x: 2160.9176337010394
+        y: 526.7511955007253
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: true
+        items:
+        - input_type: variable
+          operation: extend
+          value:
+          - '1773370864689'
+          - con_end
+          variable_selector:
+          - '1773325502648'
+          - con
+          write_mode: over-write
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1773370864689'
+          - current_turn_index
+          variable_selector:
+          - '1773325502648'
+          - current_turn_index
+          write_mode: over-write
+        - input_type: variable
+          operation: extend
+          value:
+          - '1773370864689'
+          - results_end
+          variable_selector:
+          - '1773325502648'
+          - results
+          write_mode: over-write
+        loop_id: '1773325502648'
+        selected: false
+        title: 变量赋值
+        type: assigner
+        version: '2'
+      height: 136
+      id: '1773903767386'
+      parentId: '1773325502648'
+      position:
+        x: 1008.5166024629448
+        y: 140.76617468406363
+      positionAbsolute:
+        x: 2463.9798072390695
+        y: 364.10328496405805
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "def main(con: list) -> dict:\n    import json\n\n    safe_con = []\n\
+          \    for item in con:\n        if not item or item == {}:\n            continue\n\
+          \        # 强制把每个字段转成字符串，避免不可序列化类型\n        safe_item = {}\n        for k,\
+          \ v in item.items():\n            if isinstance(v, (dict, list)):\n    \
+          \            safe_item[k] = json.dumps(v, ensure_ascii=False)\n        \
+          \    else:\n                safe_item[k] = str(v) if v is not None else\
+          \ \"\"\n        safe_con.append(safe_item)\n\n    try:\n        history\
+          \ = json.dumps(safe_con, ensure_ascii=False)\n    except Exception as e:\n\
+          \        history = json.dumps([], ensure_ascii=False)\n\n    return {\"\
+          history\": history}"
+        code_language: python3
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        outputs:
+          history:
+            children: null
+            type: string
+        selected: false
+        title: 历史上下文
+        type: code
+        variables:
+        - value_selector:
+          - '1773325502648'
+          - con
+          value_type: array[object]
+          variable: con
+      height: 52
+      id: '1773906372738'
+      parentId: '1773325502648'
+      position:
+        x: 421.01307987375367
+        y: 65
+      positionAbsolute:
+        x: 1876.4762846498782
+        y: 288.3371102799944
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "def main(results: list, con: list) -> dict:\n    import json  # 如果后面没用到\
+          \ json，可以考虑移除这行\n\n    # 1. 输出循环变量\n    '''\n    print(\"=== 原始数据 ===\"\
+          )\n    print(\"results:\", results)\n    print(\"con:\", con)\n    \n  \
+          \  # 2. 清空循环变量中的空数组\n    results = [item for item in results if item]\n\
+          \    con = [item for item in con if item]\n    '''\n    # 3. 再输出一次\n   \
+          \ print(\"\\n=== 清空空数组后 ===\")\n    print(\"results:\", results)\n    print(\"\
+          con:\", con)\n    \n    return {\n        \"con\": con,\n        \"results\"\
+          : results\n    }"
+        code_language: python3
+        isInIteration: false
+        isInLoop: true
+        loop_id: '1773325502648'
+        outputs:
+          con:
+            children: null
+            type: array[object]
+          results:
+            children: null
+            type: array[object]
+        selected: false
+        title: 检查con、results
+        type: code
+        variables:
+        - value_selector:
+          - '1773325502648'
+          - results
+          value_type: array[object]
+          variable: results
+        - value_selector:
+          - '1773325502648'
+          - con
+          value_type: array[object]
+          variable: con
+      height: 52
+      id: '1773975018107'
+      parentId: '1773325502648'
+      position:
+        x: 107.41449762128627
+        y: 72.29200415510832
+      positionAbsolute:
+        x: 1562.8777023974108
+        y: 295.62911443510274
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        code: "def main(results: list) -> dict:\n    import json\n\n    # ==========\
+          \ 权重配置（调参区）==========\n    INTENT_WEIGHT = 0.5\n    SLOT_WEIGHT   = 0.5\n\
+          \    # =======================================\n\n    valid = [r for r in\
+          \ results if r and r != {} and \"intent\" in r]\n\n    if not valid:\n \
+          \       return {\n            \"total_turns\":          \"0\",\n       \
+          \     \"intent_accuracy\":      \"0.0\",\n            \"intent_precision_avg\"\
+          : \"0.0\",\n            \"intent_recall_avg\":    \"0.0\",\n           \
+          \ \"slot_f1_avg\":          \"0.0\",\n            \"objective_score\": \
+          \     \"0.0\",\n            \"turn_details\":         [],\n            \"\
+          error\":                \"results 为空或无有效数据\"\n        }\n\n    total = len(valid)\n\
+          \n    intent_correct_count = sum(1 for r in valid if r[\"intent\"].get(\"\
+          correct\", False))\n    intent_accuracy      = round(intent_correct_count\
+          \ / total, 4)\n    intent_precision_avg = round(sum(r[\"intent\"].get(\"\
+          precision\", 0) for r in valid) / total, 4)\n    intent_recall_avg    =\
+          \ round(sum(r[\"intent\"].get(\"recall\",    0) for r in valid) / total,\
+          \ 4)\n    slot_f1_avg          = round(sum(r[\"slots\"].get(\"f1\",    \
+          \     0) for r in valid) / total, 4)\n\n    objective_score = round(\n \
+          \       (intent_accuracy * INTENT_WEIGHT + slot_f1_avg * SLOT_WEIGHT) *\
+          \ 100, 2\n    )\n\n    turn_details = [\n        {\n            \"turn\"\
+          :             r[\"turn\"],\n            \"user_query\":       r[\"user_query\"\
+          ],\n            \"intent_correct\":   r[\"intent\"].get(\"correct\",   False),\n\
+          \            \"intent_ground\":    r[\"intent\"].get(\"ground\",    \"\"\
+          ),\n            \"intent_predicted\": r[\"intent\"].get(\"predicted\", \"\
+          \"),\n            \"slot_f1\":          r[\"slots\"].get(\"f1\",       \
+          \  0.0),\n            \"slot_misses\": json.dumps(r[\"slots\"].get(\"misses\"\
+          , {}), ensure_ascii=False),\n            \"llm_answer\":       r.get(\"\
+          llm_answer\",          \"\"),\n        }\n        for r in valid\n    ]\n\
+          \n    return {\n        \"total_turns\":          str(total),\n        \"\
+          intent_accuracy\":      str(intent_accuracy),\n        \"intent_precision_avg\"\
+          : str(intent_precision_avg),\n        \"intent_recall_avg\":    str(intent_recall_avg),\n\
+          \        \"slot_f1_avg\":          str(slot_f1_avg),\n        \"objective_score\"\
+          :      str(objective_score),\n        \"turn_details\":    \n         json.dumps(turn_details,\
+          \ ensure_ascii=False),\n        \"error\":                \"\"\n    }"
+        code_language: python3
+        outputs:
+          error:
+            children: null
+            type: string
+          intent_accuracy:
+            children: null
+            type: string
+          intent_precision_avg:
+            children: null
+            type: string
+          intent_recall_avg:
+            children: null
+            type: string
+          objective_score:
+            children: null
+            type: string
+          slot_f1_avg:
+            children: null
+            type: string
+          total_turns:
+            children: null
+            type: string
+          turn_details:
+            children: null
+            type: string
+        selected: false
+        title: 客观层汇总计算
+        type: code
+        variables:
+        - value_selector:
+          - '1773325502648'
+          - results
+          value_type: array[object]
+          variable: results
+      height: 52
+      id: '1774002012245'
+      position:
+        x: 2851.9853129839025
+        y: 280.0955770897399
+      positionAbsolute:
+        x: 2851.9853129839025
+        y: 280.0955770897399
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1774002012245'
+          - turn_details
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-5.2
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_config:
+          jinja2_variables: []
+        prompt_template:
+        - edition_type: basic
+          id: fffe9595-599e-4d0e-861a-74881969ade5
+          role: system
+          text: "你是一个车载语音助手能力评估专家。\n你的任务是对模型在一段多轮对话中的表现进行主观质量评分。\n\n【逐轮对话评估数据】\n{{#context#}}\n\
+            【字段说明】\n- intent_correct: 意图是否命中(true/false)\n- intent_ground: 标准答案意图\n\
+            - intent_predicted: 模型预测意图\n- {{#1774002012245.slot_f1_avg#}}: 槽位F1分数(0-1)\n\
+            - slot_misses: 漏识别的槽位\n- llm_answer/: 模型实际回复内容\n\n【评分维度 Rubric】\n对整段对话综合打分,分值\
+            \ 1-10，允许出现0.5分:\n\n9-10分:每轮意图理解准确,槽位提取完整,回答自然流畅,上下文衔接连贯,无明显错误\n7-8分:大部分轮次表现良好,偶有意图歧义但能合理推断,槽位有小漏但不影响功能\n\
+            5-6分:意图识别基本正确,但存在槽位遗漏或回答不够精准,上下文偶有断层\n3-4分:多轮中出现明显意图误判或槽位错误,回答质量较差,影响用户体验\n\
+            1-2分:意图识别混乱,槽位大量缺失,回答与用户需求严重不符\n\n【评分重点】\n- 语义正确优先于表述一致:槽位值语义等价但写法不同,不应扣分\n\
+            - 上下文连贯性:后续轮次是否正确利用了前轮信息\n- 歧义处理能力:面对模糊表达时,模型是否做出合理推断而非直接失败\n\n【输出格式】\n\
+            必须严格输出以下JSON格式,不得包含任何其他内容:\n{\n  \"score\": <1-10的0.5的整倍数>,\n  \"reasoning\"\
+            : \"<100字以内的评分理由。如果有错误则结合数据，列出具体的错误并分析原因，不超过300字>\",\n  \"weak_turns\"\
+            : [<表现最差的turn编号,没有则空数组>],\n  \"strengths\": \"<模型表现好的地方,30字以内>\",\n  \"\
+            weaknesses\": \"<模型主要问题结合具体的槽位提取错误问题进行分析，100字以内>\"\n}\n"
+        - id: 6f7c26ce-02ac-4c40-a278-0c171aa67120
+          role: user
+          text: '【测试案例实体背景】
+
+            {{#1773043584052.test_cases#}}
+
+
+
+            '
+        selected: false
+        structured_output_enabled: true
+        title: rubric评分
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1774007516724'
+      position:
+        x: 2851.9853129839025
+        y: 396.66246012157035
+      positionAbsolute:
+        x: 2851.9853129839025
+        y: 396.66246012157035
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(judge_text: str) -> dict:\n    import json\n    import re\n\
+          \n    # ===== 清洗：去掉可能的 markdown 代码块包裹 =====\n    cleaned = judge_text.strip()\n\
+          \    cleaned = re.sub(r'^```json\\s*', '', cleaned)\n    cleaned = re.sub(r'^```\\\
+          s*',     '', cleaned)\n    cleaned = re.sub(r'\\s*```$',     '', cleaned)\n\
+          \    cleaned = cleaned.strip()\n\n    # ===== 兜底：从文本中找第一个完整 JSON 对象 =====\n\
+          \    try:\n        parsed = json.loads(cleaned)\n    except json.JSONDecodeError:\n\
+          \        match = re.search(r'\\{[\\s\\S]*\\}', cleaned)\n        if match:\n\
+          \            try:\n                parsed = json.loads(match.group())\n\
+          \            except:\n                return {\n                    \"score\"\
+          :      \"0\",\n                    \"reasoning\":  \"JSON解析失败\",\n     \
+          \               \"weak_turns\": \"[]\",\n                    \"strengths\"\
+          :  \"\",\n                    \"weaknesses\": \"\",\n                  \
+          \  \"error\":      f\"原始输出：{judge_text[:200]}\"\n                }\n   \
+          \     else:\n            return {\n                \"score\":      \"0\"\
+          ,\n                \"reasoning\":  \"未找到JSON内容\",\n                \"weak_turns\"\
+          : \"[]\",\n                \"strengths\":  \"\",\n                \"weaknesses\"\
+          : \"\",\n                \"error\":      f\"原始输出：{judge_text[:200]}\"\n\
+          \            }\n\n    # ===== 提取并校验各字段 =====\n    raw_score = parsed.get(\"\
+          score\", 0)\n    try:\n        score = int(raw_score)\n        score = max(1,\
+          \ min(5, score))   # 强制夹在 1-5\n    except:\n        score = 0\n\n    weak_turns\
+          \ = parsed.get(\"weak_turns\", [])\n    if not isinstance(weak_turns, list):\n\
+          \        weak_turns = []\n\n    return {\n        \"score\":      str(score),\n\
+          \        \"reasoning\":  str(parsed.get(\"reasoning\",  \"\")),\n      \
+          \  \"weak_turns\": json.dumps(weak_turns, ensure_ascii=False),\n       \
+          \ \"strengths\":  str(parsed.get(\"strengths\",  \"\")),\n        \"weaknesses\"\
+          : str(parsed.get(\"weaknesses\", \"\")),\n        \"error\":      \"\"\n\
+          \    }"
+        code_language: python3
+        outputs:
+          error:
+            children: null
+            type: string
+          reasoning:
+            children: null
+            type: string
+          score:
+            children: null
+            type: string
+          strengths:
+            children: null
+            type: string
+          weak_turns:
+            children: null
+            type: string
+          weaknesses:
+            children: null
+            type: string
+        selected: false
+        title: 提取主观分
+        type: code
+        variables:
+        - value_selector:
+          - '1774007516724'
+          - text
+          value_type: string
+          variable: judge_text
+      height: 52
+      id: '1774008810733'
+      position:
+        x: 2851.9853129839025
+        y: 553.6332859808806
+      positionAbsolute:
+        x: 2851.9853129839025
+        y: 553.6332859808806
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(\n    objective_score: str,\n    intent_accuracy: str,\n \
+          \   slot_f1_avg: str,\n    total_turns: str,\n    turn_details: str,\n \
+          \   score: str,\n    reasoning: str,\n    weak_turns: str,\n    strengths:\
+          \ str,\n    weaknesses: str\n) -> dict:\n    import json\n\n    # ==========\
+          \ 权重配置（调参区）==========\n    OBJECTIVE_WEIGHT  = 0.4\n    SUBJECTIVE_WEIGHT\
+          \ = 0.6\n    # =======================================\n\n    try:\n   \
+          \     obj_score      = float(objective_score)\n        subj_score_raw =\
+          \ float(score)\n        subj_score     = subj_score_raw * 20\n\n       \
+          \ intent_acc = float(intent_accuracy)\n        slot_f1    = float(slot_f1_avg)\n\
+          \        turns      = int(total_turns)\n\n        # ===== 修复点：turn_details\
+          \ 是字符串，需要先解析 =====\n        try:\n            turn_details_list = json.loads(turn_details)\n\
+          \            if not isinstance(turn_details_list, list):\n             \
+          \   turn_details_list = []\n        except Exception:\n            turn_details_list\
+          \ = []\n\n        try:\n            weak_turns_list = json.loads(weak_turns)\n\
+          \            if not isinstance(weak_turns_list, list):\n               \
+          \ weak_turns_list = []\n        except Exception:\n            weak_turns_list\
+          \ = []\n\n        if subj_score_raw == 0:\n            final_score = round(obj_score,\
+          \ 2)\n            score_mode  = \"客观分降级（Judge解析失败）\"\n        else:\n  \
+          \          final_score = round(obj_score * OBJECTIVE_WEIGHT + subj_score\
+          \ * SUBJECTIVE_WEIGHT, 2)\n            score_mode  = \"客观+主观综合\"\n\n   \
+          \     failed_intents = [\n            {\n                \"turn\":     \
+          \  d[\"turn\"],\n                \"query\":      d[\"user_query\"],\n  \
+          \              \"ground\":     d[\"intent_ground\"],\n                \"\
+          predicted\":  d[\"intent_predicted\"],\n                \"llm_answer\":\
+          \ d.get(\"llm_answer\", \"\"),\n            }\n            for d in turn_details_list\n\
+          \            if isinstance(d, dict) and not d.get(\"intent_correct\", True)\n\
+          \        ]\n\n        failed_slots = [\n            {\n                \"\
+          turn\":       d[\"turn\"],\n                \"query\":      d[\"user_query\"\
+          ],\n                \"misses\":     d[\"slot_misses\"],\n              \
+          \  \"f1\":         d[\"slot_f1\"],\n                \"llm_answer\": d.get(\"\
+          llm_answer\", \"\"),\n            }\n            for d in turn_details_list\n\
+          \            if isinstance(d, dict) and d.get(\"slot_f1\", 1.0) < 1.0\n\
+          \        ]\n\n        if final_score >= 90:\n            grade = \"优秀\"\n\
+          \        elif final_score >= 75:\n            grade = \"良好\"\n        elif\
+          \ final_score >= 60:\n            grade = \"及格\"\n        else:\n      \
+          \      grade = \"不及格\"\n\n        # ===== 展示用格式化数值 =====\n        intent_accuracy_pct\
+          \ = str(round(intent_acc * 100, 1)) + \"%\"\n        slot_f1_pct       \
+          \  = str(round(slot_f1    * 100, 1)) + \"%\"\n        subj_score_display\
+          \  = str(subj_score_raw) + \" / 5\"\n\n        return {\n            \"\
+          final_score\":      str(final_score),\n            \"grade\":          \
+          \  grade,\n            \"score_mode\":       score_mode,\n            \"\
+          objective_score\":  str(obj_score),\n            \"subjective_score\": str(round(subj_score,\
+          \ 2)),\n            \"subjective_raw\":   str(subj_score_raw),\n       \
+          \     \"intent_accuracy\":  str(intent_acc),\n            \"slot_f1_avg\"\
+          :      str(slot_f1),\n            \"total_turns\":      str(turns),\n  \
+          \          \"reasoning\":        reasoning,\n            \"strengths\":\
+          \        strengths,\n            \"weaknesses\":       weaknesses,\n   \
+          \         \"weak_turns\":       json.dumps(weak_turns_list,  ensure_ascii=False),\n\
+          \            \"failed_intents\":   json.dumps(failed_intents,   ensure_ascii=False),\n\
+          \            \"failed_slots\":     json.dumps(failed_slots,     ensure_ascii=False),\n\
+          \            \"intent_accuracy_pct\": intent_accuracy_pct,\n           \
+          \ \"slot_f1_pct\":         slot_f1_pct,\n            \"subj_score_display\"\
+          :  subj_score_display,\n            \"error\":            \"\"\n       \
+          \ }\n\n    except Exception as e:\n        return {\n            \"final_score\"\
+          : \"0\", \"grade\": \"错误\", \"score_mode\": \"异常\",\n            \"objective_score\"\
+          : \"\", \"subjective_score\": \"\", \"subjective_raw\": \"\",\n        \
+          \    \"intent_accuracy\": \"\", \"slot_f1_avg\": \"\", \"total_turns\":\
+          \ \"\",\n            \"reasoning\": \"\", \"strengths\": \"\", \"weaknesses\"\
+          : \"\",\n            \"weak_turns\": \"[]\", \"failed_intents\": \"[]\"\
+          , \"failed_slots\": \"[]\",\n            \"intent_accuracy_pct\": \"\",\
+          \ \"slot_f1_pct\": \"\", \"subj_score_display\": \"\",\n            \"error\"\
+          : str(e)\n        }"
+        code_language: python3
+        outputs:
+          error:
+            children: null
+            type: string
+          failed_intents:
+            children: null
+            type: string
+          failed_slots:
+            children: null
+            type: string
+          final_score:
+            children: null
+            type: string
+          grade:
+            children: null
+            type: string
+          intent_accuracy:
+            children: null
+            type: string
+          intent_accuracy_pct:
+            children: null
+            type: string
+          objective_score:
+            children: null
+            type: string
+          reasoning:
+            children: null
+            type: string
+          score_mode:
+            children: null
+            type: string
+          slot_f1_avg:
+            children: null
+            type: string
+          slot_f1_pct:
+            children: null
+            type: string
+          strengths:
+            children: null
+            type: string
+          subj_score_display:
+            children: null
+            type: string
+          subjective_raw:
+            children: null
+            type: string
+          subjective_score:
+            children: null
+            type: string
+          total_turns:
+            children: null
+            type: string
+          weak_turns:
+            children: null
+            type: string
+          weaknesses:
+            children: null
+            type: string
+        selected: false
+        title: 综合得分计算
+        type: code
+        variables:
+        - value_selector:
+          - '1774002012245'
+          - objective_score
+          value_type: string
+          variable: objective_score
+        - value_selector:
+          - '1774002012245'
+          - intent_accuracy
+          value_type: string
+          variable: intent_accuracy
+        - value_selector:
+          - '1774002012245'
+          - slot_f1_avg
+          value_type: string
+          variable: slot_f1_avg
+        - value_selector:
+          - '1774002012245'
+          - total_turns
+          value_type: string
+          variable: total_turns
+        - value_selector:
+          - '1774002012245'
+          - turn_details
+          value_type: array[object]
+          variable: turn_details
+        - value_selector:
+          - '1774008810733'
+          - score
+          value_type: string
+          variable: score
+        - value_selector:
+          - '1774008810733'
+          - reasoning
+          value_type: string
+          variable: reasoning
+        - value_selector:
+          - '1774008810733'
+          - weak_turns
+          value_type: string
+          variable: weak_turns
+        - value_selector:
+          - '1774008810733'
+          - strengths
+          value_type: string
+          variable: strengths
+        - value_selector:
+          - '1774008810733'
+          - weaknesses
+          value_type: string
+          variable: weaknesses
+      height: 52
+      id: '1774009062177'
+      position:
+        x: 3153.010558220137
+        y: 280.0955770897399
+      positionAbsolute:
+        x: 3153.010558220137
+        y: 280.0955770897399
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        selected: false
+        template: "# 车载语音助手模型评估报告\r\n\r\n---\r\n\r\n## 综合得分\r\n\r\n**{{ final_score\
+          \ }} / 100**　　等级：{{ grade }}　　计分模式：{{ score_mode }}\r\n\r\n| 维度 | 得分 | 说明\
+          \ |\r\n|------|------|------|\r\n| 客观层 | {{ objective_score }} / 100 | 意图准确率\
+          \ × 0.5 + 槽位F1 × 0.5 |\r\n| 主观层 | {{ subjective_score }} / 100 | Judge 原始评分\
+          \ {{ subjective_raw }} / 5 |\r\n\r\n---\r\n\r\n## 客观层明细\r\n\r\n| 指标 | 数值\
+          \ |\r\n|------|------|\r\n| 测试轮数 | {{ total_turns }} 轮 |\r\n| 意图准确率 | {{\
+          \ intent_accuracy }} |\r\n| 槽位 F1 均值 | {{ slot_f1_avg }} |\r\n\r\n---\r\n\
+          \r\n## 主观层评价\r\n\r\n**评分理由：** {{ reasoning }}\r\n\r\n**模型优势：** {{ strengths\
+          \ }}\r\n\r\n**主要问题：** {{ weaknesses }}\r\n\r\n**表现较差的轮次：** {{ weak_turns\
+          \ }}\r\n\r\n---\r\n\r\n## 失败案例\r\n\r\n**意图识别失败：**\r\n{{ failed_intents }}\r\
+          \n\r\n**槽位提取失败：**\r\n{{ failed_slots }}\r\n\r\n## 对话记录\r\n\r\n{{ con }}"
+        title: 模板转换
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1774009062177'
+          - final_score
+          value_type: string
+          variable: final_score
+        - value_selector:
+          - '1774009062177'
+          - grade
+          value_type: string
+          variable: grade
+        - value_selector:
+          - '1774009062177'
+          - objective_score
+          value_type: string
+          variable: objective_score
+        - value_selector:
+          - '1774009062177'
+          - subjective_score
+          value_type: string
+          variable: subjective_score
+        - value_selector:
+          - '1774009062177'
+          - subjective_raw
+          value_type: string
+          variable: subjective_raw
+        - value_selector:
+          - '1774009062177'
+          - score_mode
+          value_type: string
+          variable: score_mode
+        - value_selector:
+          - '1774009062177'
+          - total_turns
+          value_type: string
+          variable: total_turns
+        - value_selector:
+          - '1774009062177'
+          - intent_accuracy
+          value_type: string
+          variable: intent_accuracy
+        - value_selector:
+          - '1774009062177'
+          - slot_f1_avg
+          value_type: string
+          variable: slot_f1_avg
+        - value_selector:
+          - '1774009062177'
+          - reasoning
+          value_type: string
+          variable: reasoning
+        - value_selector:
+          - '1774009062177'
+          - strengths
+          value_type: string
+          variable: strengths
+        - value_selector:
+          - '1774009062177'
+          - weaknesses
+          value_type: string
+          variable: weaknesses
+        - value_selector:
+          - '1774009062177'
+          - weak_turns
+          value_type: string
+          variable: weak_turns
+        - value_selector:
+          - '1774009062177'
+          - intent_accuracy
+          value_type: string
+          variable: intent_accuracy_1
+        - value_selector:
+          - '1774009062177'
+          - failed_slots
+          value_type: string
+          variable: failed_slots
+        - value_selector:
+          - '1773325502648'
+          - con
+          variable: con
+        - value_selector:
+          - '1774009062177'
+          - failed_intents
+          value_type: string
+          variable: failed_intents
+      height: 52
+      id: '1774010433801'
+      position:
+        x: 3164.4751257154917
+        y: 412.8043254823954
+      positionAbsolute:
+        x: 3164.4751257154917
+        y: 412.8043254823954
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: gpt-5.2
+          provider: langgenius/openai_api_compatible/openai_api_compatible
+        prompt_template:
+        - id: 50eb67e5-e594-4af5-b9e5-cdad63abd27a
+          role: system
+          text: "你是车载语音助手评测分析专家。 你会收到一份评估报告草稿，其中失败案例部分是原始 JSON 数据。\n\n【你需要做的】\n1.\
+            \ 原样保留报告草稿中「综合得分」「客观层明细」「主观层评价」「对话记录」四个章节，一字不改 \n2. 将「失败案例」章节的 JSON 数据转化为自然语言表格或列表，包括“槽位提取失败详情“和”意图理解失败详情”，分成两个表格\n\
+            3. 在报告主观层评价和对话记录两个章节之间新加两个章节：\n\n## 失败模式归纳 （基于失败案例归纳 2-3 个规律性问题，每条 50\
+            \ 字以内；若无失败案例则注明） \n## 改进建议 （针对归纳出的模式给出 2-3 条具体可执行建议，每条 80 字以内） \n\n【约束】\
+            \ \n- 不得修改任何数值\n- 只输出 Markdown，不输出代码块标记 \n- 失败案例为空时，对应章节注明「本次评估无此类失败案例」"
+        - id: 43b85802-a5bb-42a1-98e8-793ea3317b01
+          role: user
+          text: '以下是评估报告草稿，请按要求润色：
+
+            {{#1774010433801.output#}}'
+        selected: false
+        structured_output_enabled: true
+        title: 报告润色/分析洞察
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1774010592933'
+      position:
+        x: 3153.010558220137
+        y: 519.8290700667922
+      positionAbsolute:
+        x: 3153.010558220137
+        y: 519.8290700667922
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1774010592933'
+          - text
+          value_type: string
+          variable: text
+        selected: false
+        title: 输出
+        type: end
+      height: 88
+      id: '1774010755870'
+      position:
+        x: 3469.9899376306957
+        y: 513.3723239224622
+      positionAbsolute:
+        x: 3469.9899376306957
+        y: 513.3723239224622
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\n\ndef main(query: str) -> dict:\n    try:\n        # 第一步：去掉首尾的外层引号（CSV\
+          \ QUOTE_ALL 包裹产生的）\n        query_str = query.strip()\n        if query_str.startswith('\"\
+          ') and query_str.endswith('\"'):\n            query_str = query_str[1:-1]\n\
+          \        \n        # 第二步：还原 CSV 转义的双引号（\"\" -> \"）\n        query_str =\
+          \ query_str.replace('\"\"', '\"')\n        \n        # 第三步：解析 JSON\n   \
+          \     data_dict = json.loads(query_str)\n        \n        # 第四步：提取 turns\n\
+          \        turns = data_dict.get(\"turns\", [])\n        \n        return\
+          \ {\n            \"data_dict\": turns,\n            \"results\": \"success\"\
+          \n        }\n\n    except Exception as e:\n        return {\n          \
+          \  \"data_dict\": {},\n            \"results\": f\"error: {str(e)}\"\n \
+          \       }"
+        code_language: python3
+        outputs:
+          data_dict:
+            children: null
+            type: array[object]
+          results:
+            children: null
+            type: string
+        selected: false
+        title: 转义
+        type: code
+        variables:
+        - value_selector:
+          - '1773043584052'
+          - query
+          value_type: string
+          variable: query
+      height: 52
+      id: '1774618631356'
+      position:
+        x: 703.4307887487489
+        y: 343.09469694130496
+      positionAbsolute:
+        x: 703.4307887487489
+        y: 343.09469694130496
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -1784.2334084565896
+      y: 125.56141801184674
+      zoom: 1.12006501226749
+  rag_pipeline_variables: []

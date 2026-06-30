@@ -1,0 +1,6 @@
+aiohttp
+requests
+matplotlib
+numpy
+openai
+python-dotenv

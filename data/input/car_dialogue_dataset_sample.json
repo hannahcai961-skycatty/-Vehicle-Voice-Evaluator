@@ -1,0 +1,679 @@
+{
+  "conversations": [
+    {
+      "conv_id": "C001",
+      "domain": "媒体 + 车辆控制",
+      "scenario": "长途夜归提神 + 调暗氛围灯",
+      "turns": [
+        {
+          "turn": 1,
+          "ground_truth_intent": "cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "age / non_dangerous behavior"
+          },
+          "user_query": "哎...眼睛好酸啊，帮我看看我现在状态怎么样，是不是有点疲劳驾驶了"
+        },
+        {
+          "turn": 2,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "audio.set_type / current_track_title"
+          },
+          "user_query": "放点什么提神的吧，现在播的这首歌叫什么来着"
+        },
+        {
+          "turn": 3,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "range_remaining_km / ac_temperature_setting_celsius"
+          },
+          "user_query": "还剩多少油啊...空调现在多少度，有点闷"
+        },
+        {
+          "turn": 4,
+          "ground_truth_intent": "cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "age / gender"
+          },
+          "user_query": "那个...刚才说的我疲劳驾驶的情况，我现在状态好点没"
+        },
+        {
+          "turn": 5,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "preferred_driving_style / preferred_ventilation_mode"
+          },
+          "user_query": "我开长途喜欢怎么吹空调来着，还有平时驾驶风格你晓得吧"
+        },
+        {
+          "turn": 6,
+          "ground_truth_intent": "entertainment_media + cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "music_behavior_on_call / preferred_music_genres / age / gender"
+          },
+          "user_query": "对了，打电话的时候音乐怎么处理的...我喜欢听什么类型的你也知道，就是我这种三十多岁的"
+        },
+        {
+          "turn": 7,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "schedule.location / is_holiday"
+          },
+          "user_query": "明天放假不...我到家那边有啥安排没"
+        },
+        {
+          "turn": 8,
+          "ground_truth_intent": "user_preference_and_habit + real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "preferred_ac_temperature_celsius / spatial_audio_mode / ac.position / speed_kmh"
+          },
+          "user_query": "空调调到我喜欢温度，那个空间音频开一下，还有我现在开多快啊"
+        },
+        {
+          "turn": 9,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "wind_speed_kmh / road_surface.type"
+          },
+          "user_query": "外面风大不大，路面什么情况"
+        },
+        {
+          "turn": 10,
+          "ground_truth_intent": "entertainment_media + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "preferred_streaming_platform / volume_level_percent / vehicle_model / vehicle_id"
+          },
+          "user_query": "连我平时用的那个音乐平台，声音调小点...我这车啥型号来着"
+        },
+        {
+          "turn": 11,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "waypoint / destination"
+          },
+          "user_query": "导航去前面那个服务区，加个途经点"
+        },
+        {
+          "turn": 12,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "ac.target_function / windows.target_function"
+          },
+          "user_query": "空调换个模式吹脚，窗户也开条缝透透气"
+        },
+        {
+          "turn": 13,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "home_location / preferred_radio_stations"
+          },
+          "user_query": "我家地址你存了吧...还有我平时听哪个电台"
+        },
+        {
+          "turn": 14,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "mood_based_music / preferred_radio_stations"
+          },
+          "user_query": "根据我现在心情推几首歌呗，就是刚才说的那个电台"
+        },
+        {
+          "turn": 15,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_id / vehicle_model"
+          },
+          "user_query": "我这车具体啥型号，车架号多少"
+        },
+        {
+          "turn": 16,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "schedule_type / is_working_day"
+          },
+          "user_query": "明天上班日还是周末啊，我日历里啥安排"
+        },
+        {
+          "turn": 17,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "time_to_destination_minutes / poi_search_results"
+          },
+          "user_query": "到那个服务区还要多久，那边有啥好吃的"
+        },
+        {
+          "turn": 18,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "road_surface.type / wind_speed_kmh"
+          },
+          "user_query": "路面现在什么状况，风大不大"
+        },
+        {
+          "turn": 19,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "wind_speed_kmh / road_surface.type"
+          },
+          "user_query": "就是刚才说的那个风，现在小点了没"
+        }
+      ]
+    },
+    {
+      "conv_id": "C002",
+      "domain": "媒体 + 车辆控制",
+      "scenario": "长途夜归疲劳驾驶 + 切换轻音乐提神",
+      "turns": [
+        {
+          "turn": 1,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "preferred_ac_temperature_celsius / home_location"
+          },
+          "user_query": "哎...困死了，眼睛酸得不行，帮我调一下空调吧，平时我回家路上都开多少度来着"
+        },
+        {
+          "turn": 2,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "preferred_driving_style / work_location"
+          },
+          "user_query": "对了，导航设置成我平时下班那种模式，你知道的，就是那个比较稳的风格"
+        },
+        {
+          "turn": 3,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "poi_search_results / waypoint"
+          },
+          "user_query": "搜一下前面服务区有没有能休息的地方，我快撑不住了"
+        },
+        {
+          "turn": 4,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "weather.type / traffic_event"
+          },
+          "user_query": "那边天气怎么样啊，刚才说的那个服务区"
+        },
+        {
+          "turn": 5,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "range_remaining_km / ac.position"
+          },
+          "user_query": "续航还剩多少，空调风对着我吹有点难受，帮我调一下风向"
+        },
+        {
+          "turn": 6,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "current_track_title / preferred_music_genres"
+          },
+          "user_query": "放点音乐提提神吧，就我平时晚上听的那些"
+        },
+        {
+          "turn": 7,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_model / vehicle_id"
+          },
+          "user_query": "我这车座椅按摩怎么调啊，腰快断了"
+        },
+        {
+          "turn": 8,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "traffic_event / traffic_condition"
+          },
+          "user_query": "前面堵不堵啊，刚才问的那条路线"
+        },
+        {
+          "turn": 9,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "ventilation_mode / ac_temperature_setting_celsius"
+          },
+          "user_query": "太闷了，把窗户开个缝透透气，空调也调低点"
+        },
+        {
+          "turn": 10,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "audio.target_function / audio.position"
+          },
+          "user_query": "换种音乐吧，刚才那个太吵了，来点轻音乐"
+        },
+        {
+          "turn": 11,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "windows_status / ventilation_mode"
+          },
+          "user_query": "后排窗户关严实了吗，风噪好大"
+        },
+        {
+          "turn": 12,
+          "ground_truth_intent": "time_and_schedule + real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "is_holiday / reminder_time_minutes_before / windows.target_function / speed_kmh"
+          },
+          "user_query": "明天是不是节假日啊，设个提醒吧，还有帮我看下现在车速稳不稳"
+        },
+        {
+          "turn": 13,
+          "ground_truth_intent": "location_and_navigation + time_and_schedule",
+          "ground_slots": {
+            "attribute": "traffic_condition / destination_name / schedule.location / reminder_time_minutes_before"
+          },
+          "user_query": "按现在这个路况，到我家还有多久，我明天早上有个会得准时到"
+        },
+        {
+          "turn": 14,
+          "ground_truth_intent": "cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "safety_seats / non_dangerous behavior"
+          },
+          "user_query": "帮我盯着点后面，我打个哈欠，有异常提醒我"
+        },
+        {
+          "turn": 15,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "preferred_streaming_platform / mood_based_music"
+          },
+          "user_query": "连上我常用的那个音乐软件，找点适合半夜开车听的"
+        },
+        {
+          "turn": 16,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "current_media_type / audio.value"
+          },
+          "user_query": "刚才那个歌单再往下播几首，音量调小两格"
+        },
+        {
+          "turn": 17,
+          "ground_truth_intent": "vehicle_basic_info + cabin_perception",
+          "ground_slots": {
+            "attribute": "vehicle_model / vehicle_id / weather.type / traffic_condition"
+          },
+          "user_query": "我这车是什么型号来着，外面起雾了前面看得清吗"
+        },
+        {
+          "turn": 18,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "ventilation_mode / windows_status"
+          },
+          "user_query": "开一下除雾，窗户也关了吧"
+        },
+        {
+          "turn": 19,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "audio.set_type / music_behavior_on_call"
+          },
+          "user_query": "换成那种纯音乐的，有人打电话进来的时候自动暂停"
+        }
+      ]
+    },
+    {
+      "conv_id": "C003",
+      "domain": "外部信息 + 时间日程 + 车辆控制",
+      "scenario": "日常驾车场景（外部信息 + 时间日程 + 车辆控制）",
+      "turns": [
+        {
+          "turn": 1,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "schedule_status / schedule_type"
+          },
+          "user_query": "哎...今天有什么日程安排吗，是不是要开什么会啊"
+        },
+        {
+          "turn": 2,
+          "ground_truth_intent": "entertainment_media + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "current_track_artist / volume_level_percent / vehicle_model / vehicle_id"
+          },
+          "user_query": "现在放的谁的歌啊，声音调大点呗...对了咱这车是什么型号来着"
+        },
+        {
+          "turn": 3,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "traffic_event / temperature_celsius"
+          },
+          "user_query": "嘶...前面是不是堵了，空调有点热啊这温度"
+        },
+        {
+          "turn": 4,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "mood_based_music / current_track_artist"
+          },
+          "user_query": "心情不太好，给我来点治愈系的歌吧，就那个...陈绮贞那种"
+        },
+        {
+          "turn": 5,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "visibility / traffic_condition"
+          },
+          "user_query": "雾这么大能看清路吗，前面路况怎么样啊"
+        },
+        {
+          "turn": 6,
+          "ground_truth_intent": "vehicle_basic_info + user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "vehicle_model / vehicle_id / spatial_audio_mode / preferred_driving_style"
+          },
+          "user_query": "咱这车支持空间音频不，我喜欢运动模式开起来爽一点"
+        },
+        {
+          "turn": 7,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "temperature_celsius / road_surface.type"
+          },
+          "user_query": "刚才说的那个运动模式...现在外面多少度啊，路面湿不湿啊"
+        },
+        {
+          "turn": 8,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "spatial_audio_mode / preferred_music_genres"
+          },
+          "user_query": "那个空间音频打开没，给我切到摇滚吧配合这路"
+        },
+        {
+          "turn": 9,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "schedule.location / is_holiday"
+          },
+          "user_query": "明天放假不，我得去趟客户那儿"
+        },
+        {
+          "turn": 10,
+          "ground_truth_intent": "time_and_schedule + cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "is_holiday / is_working_day / non_dangerous behavior / safety_seats"
+          },
+          "user_query": "哦对刚才说的客户那儿...是工作日吧，帮我看看后排安全带系好没，别玩手机啊"
+        },
+        {
+          "turn": 11,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "schedule_type / schedule.location"
+          },
+          "user_query": "算了刚才那个客户会议改到下午吧，地点还是那儿"
+        },
+        {
+          "turn": 12,
+          "ground_truth_intent": "entertainment_media + time_and_schedule",
+          "ground_slots": {
+            "attribute": "mood_based_music / spatial_audio_mode / is_working_day / schedule.date"
+          },
+          "user_query": "周末了整点欢快的歌，空间音频开着吧，下周几号来着"
+        },
+        {
+          "turn": 13,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "road_surface.type / weather.type"
+          },
+          "user_query": "刚才说的周末这天气...路面会不会结冰啊，下雪了没"
+        },
+        {
+          "turn": 14,
+          "ground_truth_intent": "time_and_schedule + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "is_working_day / schedule.date / vehicle_model / vehicle_id"
+          },
+          "user_query": "下周一是工作日吧，几号了，咱这车续航还够不"
+        },
+        {
+          "turn": 15,
+          "ground_truth_intent": "user_preference_and_habit + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "mood_based_music / preferred_radio_stations / vehicle_id / vehicle_model"
+          },
+          "user_query": "心情好给我切到常听的电台吧，就是音乐台那个，再确认下咱车信息"
+        }
+      ]
+    },
+    {
+      "conv_id": "C004",
+      "domain": "媒体 + 时间日程 + 用户偏好 + 导航",
+      "scenario": "长途自驾返程 + 孩子睡后想听歌 + 明早会议提醒",
+      "turns": [
+        {
+          "turn": 1,
+          "ground_truth_intent": "cabin_internal_perception + user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "safety_seats / emotion / preferred_streaming_platform / mood_based_music"
+          },
+          "user_query": "哎...后面那小子终于睡着了，累死我了。你晓得我平时用的那个听歌软件吧，给我来点助眠的轻音乐，音量调小点别吵醒他"
+        },
+        {
+          "turn": 2,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_id / vehicle_model"
+          },
+          "user_query": "对了，你这车是什么型号来着，后座那个儿童安全座椅的提示灯老闪，是不是没扣好"
+        },
+        {
+          "turn": 3,
+          "ground_truth_intent": "time_and_schedule + entertainment_media",
+          "ground_slots": {
+            "attribute": "schedule.date / schedule.location / preferred_music_genres / audio.set_type"
+          },
+          "user_query": "帮我看看明天早上有没有日程，哦对...放点纯音乐吧，钢琴那种，别带歌词的"
+        },
+        {
+          "turn": 4,
+          "ground_truth_intent": "real_time_vehicle_status",
+          "ground_slots": {
+            "attribute": "speed_kmh / windows_status"
+          },
+          "user_query": "现在开多快了，窗户都关严了吧"
+        },
+        {
+          "turn": 5,
+          "ground_truth_intent": "cabin_perception + time_and_schedule",
+          "ground_slots": {
+            "attribute": "road_surface.type / weather.type / schedule.location / is_working_day"
+          },
+          "user_query": "这路怎么这么颠啊...外面是不是下雨了，明天上班日吗，到公司那边天气咋样"
+        },
+        {
+          "turn": 6,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "audio.target_function / audio.value"
+          },
+          "user_query": "音量再往下压两格，对，就这样"
+        },
+        {
+          "turn": 7,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_id / vehicle_model"
+          },
+          "user_query": "刚才说的那个安全座椅提示，是这车的通病还是就我这台啊"
+        },
+        {
+          "turn": 8,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_model / vehicle_id"
+          },
+          "user_query": "再确认下车辆型号，我回头问问4S店"
+        },
+        {
+          "turn": 9,
+          "ground_truth_intent": "user_preference_and_habit + cabin_perception",
+          "ground_slots": {
+            "attribute": "preferred_ventilation_mode / preferred_radio_stations / weather.type / road_surface.type"
+          },
+          "user_query": "我有点闷，开点外循环吧，顺便找下平时听的交通台，外面雨大不大路面滑不滑"
+        },
+        {
+          "turn": 10,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "destination_type / traffic_event"
+          },
+          "user_query": "前面好像堵了，看看有没有服务区能歇会儿"
+        },
+        {
+          "turn": 11,
+          "ground_truth_intent": "cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "safety_seats / gender"
+          },
+          "user_query": "后排那小子睡相咋样，安全带没松吧"
+        },
+        {
+          "turn": 12,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "drive_scene_audio_boost / preferred_ventilation_mode"
+          },
+          "user_query": "他睡了我就把音响调回正常模式吧，空调也换成我习惯的内循环"
+        },
+        {
+          "turn": 13,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "work_location / preferred_ac_temperature_celsius"
+          },
+          "user_query": "到公司我一般调24度，你记一下，明天早上九点的会在公司"
+        },
+        {
+          "turn": 14,
+          "ground_truth_intent": "cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "gender / emotion"
+          },
+          "user_query": "我眼睛好酸...明天那会是线上还是线下啊，我状态行不行"
+        },
+        {
+          "turn": 15,
+          "ground_truth_intent": "real_time_vehicle_status + location_and_navigation",
+          "ground_slots": {
+            "attribute": "ac.target_function / range_remaining_km / route_total_distance_km / destination"
+          },
+          "user_query": "空调按我刚才说的调，还有多远到公司，电还够不，不够先找充电桩"
+        }
+      ]
+    },
+    {
+      "conv_id": "C005",
+      "domain": "外部信息 + 导航 + 车辆控制 + 时间日程",
+      "scenario": "长途自驾跨省出差 + 途中会议提醒 + 服务区找桩充电",
+      "turns": [
+        {
+          "turn": 1,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "poi_search_results / destination"
+          },
+          "user_query": "哎...帮我搜一下去杭州最近的高速口，我要跨省出差"
+        },
+        {
+          "turn": 2,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "current_track_title / drive_scene_audio_boost"
+          },
+          "user_query": "对了，刚才那个路线大概要开多久？给我放点提神的东西听听"
+        },
+        {
+          "turn": 3,
+          "ground_truth_intent": "entertainment_media + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "audio.value / current_media_type / vehicle_id / vehicle_model"
+          },
+          "user_query": "这个歌太躁了...换那个平时听的播客吧，顺便看看我这车电量还剩多少"
+        },
+        {
+          "turn": 4,
+          "ground_truth_intent": "location_and_navigation",
+          "ground_slots": {
+            "attribute": "traffic_event / destination_name"
+          },
+          "user_query": "前面是不是堵车了，帮我看看到杭州还有多远"
+        },
+        {
+          "turn": 5,
+          "ground_truth_intent": "entertainment_media",
+          "ground_slots": {
+            "attribute": "audio.position / preferred_streaming_platform"
+          },
+          "user_query": "堵成这样...把刚才那个播客暂停一下，我眯会儿，到了叫我"
+        },
+        {
+          "turn": 6,
+          "ground_truth_intent": "real_time_vehicle_status + vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "speed_kmh / windows_status / vehicle_id / vehicle_model"
+          },
+          "user_query": "现在车速多少了？窗户关严没，风噪好大"
+        },
+        {
+          "turn": 7,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_id / vehicle_model"
+          },
+          "user_query": "我这车是什么型号来着，续航准不准啊"
+        },
+        {
+          "turn": 8,
+          "ground_truth_intent": "vehicle_basic_info",
+          "ground_slots": {
+            "attribute": "vehicle_model / vehicle_id"
+          },
+          "user_query": "对对对就是这个，那它快充要多久"
+        },
+        {
+          "turn": 9,
+          "ground_truth_intent": "cabin_perception",
+          "ground_slots": {
+            "attribute": "wind_speed_kmh / visibility"
+          },
+          "user_query": "外面风好大...能见度怎么样，不会要下雨吧"
+        },
+        {
+          "turn": 10,
+          "ground_truth_intent": "time_and_schedule",
+          "ground_slots": {
+            "attribute": "reminder_time_minutes_before / is_holiday"
+          },
+          "user_query": "帮我设个提醒，下午三点有个视频会议，提前十分钟叫我"
+        },
+        {
+          "turn": 11,
+          "ground_truth_intent": "real_time_vehicle_status + cabin_internal_perception",
+          "ground_slots": {
+            "attribute": "ventilation_mode / ac.target_function / non_dangerous behavior / emotion"
+          },
+          "user_query": "有点闷...空调开外循环吧，我头有点晕"
+        },
+        {
+          "turn": 12,
+          "ground_truth_intent": "user_preference_and_habit",
+          "ground_slots": {
+            "attribute": "preferred_audiobooks / spatial_audio_mode"
+          },
+          "user_query": "算了还是听点书吧，就那个...你知道的，我平时睡前听的那种"
+        }
+      ]
+    }
+  ]
+}

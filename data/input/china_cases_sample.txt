@@ -1,0 +1,807 @@
+[
+  {
+    "case_id": "case001",
+    "description": "西安随机驾驶场景，天气为cloudy，包含通勤或出行任务。",
+    "entities": [
+      {
+        "id": "cabin1",
+        "category": "cabin_internal_perception",
+        "type": "gender/age/safety_seats/non_dangerous behavior/emotion",
+        "value": {
+          "gender": "male",
+          "age": 37,
+          "safety_seats": "fastened",
+          "non_dangerous behavior": [
+            "listening to music"
+          ],
+          "emotion": "calm"
+        },
+        "note": "基础驾驶状态"
+      },
+      {
+        "id": "env1",
+        "category": "cabin_perception",
+        "type": "weather.type/visibility/road_surface.type/temperature_celsius/wind_speed_kmh",
+        "value": {
+          "weather.type": "cloudy",
+          "visibility": "very_low",
+          "road_surface.type": "dry",
+          "temperature_celsius": 10,
+          "wind_speed_kmh": 12
+        },
+        "note": "环境状态"
+      },
+      {
+        "id": "veh1",
+        "category": "vehicle_basic_info",
+        "type": "vehicle_id/vehicle_model",
+        "value": {
+          "vehicle_id": "西-SUV-9048",
+          "vehicle_model": "suv"
+        },
+        "note": "车辆信息"
+      },
+      {
+        "id": "rtv1",
+        "category": "real_time_vehicle_status",
+        "type": "ac.target_function/ac.position/windows.target_function/windows_status/speed_kmh/range_remaining_km/light_status/ac_temperature_setting_celsius/ventilation_mode",
+        "value": {
+          "ac.target_function": "open",
+          "ac.position": "all",
+          "windows.target_function": "close",
+          "windows_status": "close",
+          "speed_kmh": 52,
+          "range_remaining_km": 257,
+          "light_status": "low beam",
+          "ac_temperature_setting_celsius": 24,
+          "ventilation_mode": "automatic circulation"
+        },
+        "note": "车辆实时状态"
+      },
+      {
+        "id": "nav1",
+        "category": "location_and_navigation",
+        "type": "destination/destination_name/destination_type/distance_to_destination_km/time_to_destination_minutes/route_total_distance_km/distance_traveled_km/waypoint/poi_search_results/traffic_condition/traffic_event",
+        "value": {
+          "destination": "西安某地址",
+          "destination_name": "目的地",
+          "destination_type": "office",
+          "distance_to_destination_km": 1.6,
+          "time_to_destination_minutes": 120,
+          "route_total_distance_km": 49.9,
+          "distance_traveled_km": 19.8,
+          "waypoint": "城市主干道",
+          "poi_search_results": "停车场,咖啡店",
+          "traffic_condition": "moderate_traffic",
+          "traffic_event": "none"
+        },
+        "note": "导航信息"
+      },
+      {
+        "id": "time1",
+        "category": "time_and_schedule",
+        "type": "schedule.event/schedule.date/schedule.location/schedule_type/schedule_status/reminder_time_minutes_before/is_working_day/is_holiday",
+        "value": {
+          "schedule.event": "通勤",
+          "schedule.date": "2026-01-01",
+          "schedule.location": "西安",
+          "schedule_type": "work",
+          "schedule_status": "upcoming",
+          "reminder_time_minutes_before": 15,
+          "is_working_day": true,
+          "is_holiday": false
+        },
+        "note": "日程信息"
+      },
+      {
+        "id": "pref1",
+        "category": "user_preference_and_habit",
+        "type": "user_id/preferred_driving_style/preferred_ac_temperature_celsius/preferred_ventilation_mode/preferred_music_genres/preferred_radio_stations/preferred_podcasts/preferred_audiobooks/work_location/home_location",
+        "value": {
+          "user_id": "USR-CHN-962274",
+          "preferred_driving_style": "comfort mode",
+          "preferred_ac_temperature_celsius": 24,
+          "preferred_ventilation_mode": "automatic circulation",
+          "preferred_music_genres": [
+            "pop"
+          ],
+          "preferred_radio_stations": [
+            "FM100"
+          ],
+          "preferred_podcasts": [
+            "播客A"
+          ],
+          "preferred_audiobooks": [
+            "书籍A"
+          ],
+          "work_location": "西安",
+          "home_location": "西安"
+        },
+        "note": "用户偏好"
+      },
+      {
+        "id": "comm1",
+        "category": "communication",
+        "type": "phone.search_type/phone.person/phone.telephone/phone.phone_prefix/phone.phone_suffix/incoming_call_display/incoming_call_timestamp",
+        "value": {
+          "phone.search_type": "by_name",
+          "phone.person": "联系人",
+          "phone.telephone": "13800000000",
+          "phone.phone_prefix": "138",
+          "phone.phone_suffix": "0000",
+          "incoming_call_display": "联系人来电",
+          "incoming_call_timestamp": "2026-01-01T08:00:00+08:00"
+        },
+        "note": "通信信息"
+      },
+      {
+        "id": "media1",
+        "category": "entertainment_media",
+        "type": "audio.target_function/audio.position/audio.set_type/audio.value/current_media_type/current_track_title/current_track_artist/volume_level_percent/dark_mode_enabled/screen_brightness_percent/preferred_streaming_platform/spatial_audio_mode/mood_based_music/drive_scene_audio_boost/music_behavior_on_call/nav_music_mix_mode",
+        "value": {
+          "audio.target_function": "music",
+          "audio.position": "all",
+          "audio.set_type": "open",
+          "audio.value": "20",
+          "current_media_type": "music",
+          "current_track_title": "歌曲",
+          "current_track_artist": "歌手",
+          "volume_level_percent": 20,
+          "dark_mode_enabled": true,
+          "screen_brightness_percent": 50,
+          "preferred_streaming_platform": "qqmusic",
+          "spatial_audio_mode": "stereo",
+          "mood_based_music": true,
+          "drive_scene_audio_boost": "auto",
+          "music_behavior_on_call": "pause",
+          "nav_music_mix_mode": "duck"
+        },
+        "note": "娱乐信息"
+      }
+    ]
+  },
+  {
+    "case_id": "case002",
+    "description": "武汉随机驾驶场景，天气为clear，包含通勤或出行任务。",
+    "entities": [
+      {
+        "id": "cabin1",
+        "category": "cabin_internal_perception",
+        "type": "gender/age/safety_seats/non_dangerous behavior/emotion",
+        "value": {
+          "gender": "male",
+          "age": 45,
+          "safety_seats": "fastened",
+          "non_dangerous behavior": [
+            "listening to music"
+          ],
+          "emotion": "calm"
+        },
+        "note": "基础驾驶状态"
+      },
+      {
+        "id": "env1",
+        "category": "cabin_perception",
+        "type": "weather.type/visibility/road_surface.type/temperature_celsius/wind_speed_kmh",
+        "value": {
+          "weather.type": "clear",
+          "visibility": "very_low",
+          "road_surface.type": "dry",
+          "temperature_celsius": 17,
+          "wind_speed_kmh": 35
+        },
+        "note": "环境状态"
+      },
+      {
+        "id": "veh1",
+        "category": "vehicle_basic_info",
+        "type": "vehicle_id/vehicle_model",
+        "value": {
+          "vehicle_id": "武-SUV-7492",
+          "vehicle_model": "truck"
+        },
+        "note": "车辆信息"
+      },
+      {
+        "id": "rtv1",
+        "category": "real_time_vehicle_status",
+        "type": "ac.target_function/ac.position/windows.target_function/windows_status/speed_kmh/range_remaining_km/light_status/ac_temperature_setting_celsius/ventilation_mode",
+        "value": {
+          "ac.target_function": "open",
+          "ac.position": "all",
+          "windows.target_function": "close",
+          "windows_status": "close",
+          "speed_kmh": 47,
+          "range_remaining_km": 180,
+          "light_status": "low beam",
+          "ac_temperature_setting_celsius": 24,
+          "ventilation_mode": "automatic circulation"
+        },
+        "note": "车辆实时状态"
+      },
+      {
+        "id": "nav1",
+        "category": "location_and_navigation",
+        "type": "destination/destination_name/destination_type/distance_to_destination_km/time_to_destination_minutes/route_total_distance_km/distance_traveled_km/waypoint/poi_search_results/traffic_condition/traffic_event",
+        "value": {
+          "destination": "武汉某地址",
+          "destination_name": "目的地",
+          "destination_type": "office",
+          "distance_to_destination_km": 36.4,
+          "time_to_destination_minutes": 54,
+          "route_total_distance_km": 41.4,
+          "distance_traveled_km": 4.3,
+          "waypoint": "城市主干道",
+          "poi_search_results": "停车场,咖啡店",
+          "traffic_condition": "moderate_traffic",
+          "traffic_event": "none"
+        },
+        "note": "导航信息"
+      },
+      {
+        "id": "time1",
+        "category": "time_and_schedule",
+        "type": "schedule.event/schedule.date/schedule.location/schedule_type/schedule_status/reminder_time_minutes_before/is_working_day/is_holiday",
+        "value": {
+          "schedule.event": "通勤",
+          "schedule.date": "2026-01-01",
+          "schedule.location": "武汉",
+          "schedule_type": "work",
+          "schedule_status": "upcoming",
+          "reminder_time_minutes_before": 15,
+          "is_working_day": true,
+          "is_holiday": false
+        },
+        "note": "日程信息"
+      },
+      {
+        "id": "pref1",
+        "category": "user_preference_and_habit",
+        "type": "user_id/preferred_driving_style/preferred_ac_temperature_celsius/preferred_ventilation_mode/preferred_music_genres/preferred_radio_stations/preferred_podcasts/preferred_audiobooks/work_location/home_location",
+        "value": {
+          "user_id": "USR-CHN-447126",
+          "preferred_driving_style": "comfort mode",
+          "preferred_ac_temperature_celsius": 24,
+          "preferred_ventilation_mode": "automatic circulation",
+          "preferred_music_genres": [
+            "pop"
+          ],
+          "preferred_radio_stations": [
+            "FM100"
+          ],
+          "preferred_podcasts": [
+            "播客A"
+          ],
+          "preferred_audiobooks": [
+            "书籍A"
+          ],
+          "work_location": "武汉",
+          "home_location": "武汉"
+        },
+        "note": "用户偏好"
+      },
+      {
+        "id": "comm1",
+        "category": "communication",
+        "type": "phone.search_type/phone.person/phone.telephone/phone.phone_prefix/phone.phone_suffix/incoming_call_display/incoming_call_timestamp",
+        "value": {
+          "phone.search_type": "by_name",
+          "phone.person": "联系人",
+          "phone.telephone": "13800000000",
+          "phone.phone_prefix": "138",
+          "phone.phone_suffix": "0000",
+          "incoming_call_display": "联系人来电",
+          "incoming_call_timestamp": "2026-01-01T08:00:00+08:00"
+        },
+        "note": "通信信息"
+      },
+      {
+        "id": "media1",
+        "category": "entertainment_media",
+        "type": "audio.target_function/audio.position/audio.set_type/audio.value/current_media_type/current_track_title/current_track_artist/volume_level_percent/dark_mode_enabled/screen_brightness_percent/preferred_streaming_platform/spatial_audio_mode/mood_based_music/drive_scene_audio_boost/music_behavior_on_call/nav_music_mix_mode",
+        "value": {
+          "audio.target_function": "music",
+          "audio.position": "all",
+          "audio.set_type": "open",
+          "audio.value": "20",
+          "current_media_type": "music",
+          "current_track_title": "歌曲",
+          "current_track_artist": "歌手",
+          "volume_level_percent": 20,
+          "dark_mode_enabled": true,
+          "screen_brightness_percent": 50,
+          "preferred_streaming_platform": "qqmusic",
+          "spatial_audio_mode": "stereo",
+          "mood_based_music": true,
+          "drive_scene_audio_boost": "auto",
+          "music_behavior_on_call": "pause",
+          "nav_music_mix_mode": "duck"
+        },
+        "note": "娱乐信息"
+      }
+    ]
+  },
+  {
+    "case_id": "case003",
+    "description": "武汉随机驾驶场景，天气为cloudy，包含通勤或出行任务。",
+    "entities": [
+      {
+        "id": "cabin1",
+        "category": "cabin_internal_perception",
+        "type": "gender/age/safety_seats/non_dangerous behavior/emotion",
+        "value": {
+          "gender": "male",
+          "age": 34,
+          "safety_seats": "fastened",
+          "non_dangerous behavior": [
+            "listening to music"
+          ],
+          "emotion": "calm"
+        },
+        "note": "基础驾驶状态"
+      },
+      {
+        "id": "env1",
+        "category": "cabin_perception",
+        "type": "weather.type/visibility/road_surface.type/temperature_celsius/wind_speed_kmh",
+        "value": {
+          "weather.type": "cloudy",
+          "visibility": "medium",
+          "road_surface.type": "gravel",
+          "temperature_celsius": 6,
+          "wind_speed_kmh": 33
+        },
+        "note": "环境状态"
+      },
+      {
+        "id": "veh1",
+        "category": "vehicle_basic_info",
+        "type": "vehicle_id/vehicle_model",
+        "value": {
+          "vehicle_id": "武-SUV-7073",
+          "vehicle_model": "sedan"
+        },
+        "note": "车辆信息"
+      },
+      {
+        "id": "rtv1",
+        "category": "real_time_vehicle_status",
+        "type": "ac.target_function/ac.position/windows.target_function/windows_status/speed_kmh/range_remaining_km/light_status/ac_temperature_setting_celsius/ventilation_mode",
+        "value": {
+          "ac.target_function": "open",
+          "ac.position": "all",
+          "windows.target_function": "close",
+          "windows_status": "close",
+          "speed_kmh": 82,
+          "range_remaining_km": 387,
+          "light_status": "low beam",
+          "ac_temperature_setting_celsius": 24,
+          "ventilation_mode": "automatic circulation"
+        },
+        "note": "车辆实时状态"
+      },
+      {
+        "id": "nav1",
+        "category": "location_and_navigation",
+        "type": "destination/destination_name/destination_type/distance_to_destination_km/time_to_destination_minutes/route_total_distance_km/distance_traveled_km/waypoint/poi_search_results/traffic_condition/traffic_event",
+        "value": {
+          "destination": "武汉某地址",
+          "destination_name": "目的地",
+          "destination_type": "office",
+          "distance_to_destination_km": 26.2,
+          "time_to_destination_minutes": 44,
+          "route_total_distance_km": 18.0,
+          "distance_traveled_km": 14.4,
+          "waypoint": "城市主干道",
+          "poi_search_results": "停车场,咖啡店",
+          "traffic_condition": "moderate_traffic",
+          "traffic_event": "none"
+        },
+        "note": "导航信息"
+      },
+      {
+        "id": "time1",
+        "category": "time_and_schedule",
+        "type": "schedule.event/schedule.date/schedule.location/schedule_type/schedule_status/reminder_time_minutes_before/is_working_day/is_holiday",
+        "value": {
+          "schedule.event": "通勤",
+          "schedule.date": "2026-01-01",
+          "schedule.location": "武汉",
+          "schedule_type": "work",
+          "schedule_status": "upcoming",
+          "reminder_time_minutes_before": 15,
+          "is_working_day": true,
+          "is_holiday": false
+        },
+        "note": "日程信息"
+      },
+      {
+        "id": "pref1",
+        "category": "user_preference_and_habit",
+        "type": "user_id/preferred_driving_style/preferred_ac_temperature_celsius/preferred_ventilation_mode/preferred_music_genres/preferred_radio_stations/preferred_podcasts/preferred_audiobooks/work_location/home_location",
+        "value": {
+          "user_id": "USR-CHN-826550",
+          "preferred_driving_style": "comfort mode",
+          "preferred_ac_temperature_celsius": 24,
+          "preferred_ventilation_mode": "automatic circulation",
+          "preferred_music_genres": [
+            "pop"
+          ],
+          "preferred_radio_stations": [
+            "FM100"
+          ],
+          "preferred_podcasts": [
+            "播客A"
+          ],
+          "preferred_audiobooks": [
+            "书籍A"
+          ],
+          "work_location": "武汉",
+          "home_location": "武汉"
+        },
+        "note": "用户偏好"
+      },
+      {
+        "id": "comm1",
+        "category": "communication",
+        "type": "phone.search_type/phone.person/phone.telephone/phone.phone_prefix/phone.phone_suffix/incoming_call_display/incoming_call_timestamp",
+        "value": {
+          "phone.search_type": "by_name",
+          "phone.person": "联系人",
+          "phone.telephone": "13800000000",
+          "phone.phone_prefix": "138",
+          "phone.phone_suffix": "0000",
+          "incoming_call_display": "联系人来电",
+          "incoming_call_timestamp": "2026-01-01T08:00:00+08:00"
+        },
+        "note": "通信信息"
+      },
+      {
+        "id": "media1",
+        "category": "entertainment_media",
+        "type": "audio.target_function/audio.position/audio.set_type/audio.value/current_media_type/current_track_title/current_track_artist/volume_level_percent/dark_mode_enabled/screen_brightness_percent/preferred_streaming_platform/spatial_audio_mode/mood_based_music/drive_scene_audio_boost/music_behavior_on_call/nav_music_mix_mode",
+        "value": {
+          "audio.target_function": "music",
+          "audio.position": "all",
+          "audio.set_type": "open",
+          "audio.value": "20",
+          "current_media_type": "music",
+          "current_track_title": "歌曲",
+          "current_track_artist": "歌手",
+          "volume_level_percent": 20,
+          "dark_mode_enabled": true,
+          "screen_brightness_percent": 50,
+          "preferred_streaming_platform": "qqmusic",
+          "spatial_audio_mode": "stereo",
+          "mood_based_music": true,
+          "drive_scene_audio_boost": "auto",
+          "music_behavior_on_call": "pause",
+          "nav_music_mix_mode": "duck"
+        },
+        "note": "娱乐信息"
+      }
+    ]
+  },
+  {
+    "case_id": "case004",
+    "description": "杭州随机驾驶场景，天气为clear，包含通勤或出行任务。",
+    "entities": [
+      {
+        "id": "cabin1",
+        "category": "cabin_internal_perception",
+        "type": "gender/age/safety_seats/non_dangerous behavior/emotion",
+        "value": {
+          "gender": "male",
+          "age": 38,
+          "safety_seats": "fastened",
+          "non_dangerous behavior": [
+            "listening to music"
+          ],
+          "emotion": "calm"
+        },
+        "note": "基础驾驶状态"
+      },
+      {
+        "id": "env1",
+        "category": "cabin_perception",
+        "type": "weather.type/visibility/road_surface.type/temperature_celsius/wind_speed_kmh",
+        "value": {
+          "weather.type": "clear",
+          "visibility": "high",
+          "road_surface.type": "snow_covered",
+          "temperature_celsius": 17,
+          "wind_speed_kmh": 24
+        },
+        "note": "环境状态"
+      },
+      {
+        "id": "veh1",
+        "category": "vehicle_basic_info",
+        "type": "vehicle_id/vehicle_model",
+        "value": {
+          "vehicle_id": "杭-SUV-5078",
+          "vehicle_model": "suv"
+        },
+        "note": "车辆信息"
+      },
+      {
+        "id": "rtv1",
+        "category": "real_time_vehicle_status",
+        "type": "ac.target_function/ac.position/windows.target_function/windows_status/speed_kmh/range_remaining_km/light_status/ac_temperature_setting_celsius/ventilation_mode",
+        "value": {
+          "ac.target_function": "open",
+          "ac.position": "all",
+          "windows.target_function": "close",
+          "windows_status": "close",
+          "speed_kmh": 63,
+          "range_remaining_km": 218,
+          "light_status": "low beam",
+          "ac_temperature_setting_celsius": 24,
+          "ventilation_mode": "automatic circulation"
+        },
+        "note": "车辆实时状态"
+      },
+      {
+        "id": "nav1",
+        "category": "location_and_navigation",
+        "type": "destination/destination_name/destination_type/distance_to_destination_km/time_to_destination_minutes/route_total_distance_km/distance_traveled_km/waypoint/poi_search_results/traffic_condition/traffic_event",
+        "value": {
+          "destination": "杭州某地址",
+          "destination_name": "目的地",
+          "destination_type": "office",
+          "distance_to_destination_km": 2.2,
+          "time_to_destination_minutes": 58,
+          "route_total_distance_km": 73.9,
+          "distance_traveled_km": 16.8,
+          "waypoint": "城市主干道",
+          "poi_search_results": "停车场,咖啡店",
+          "traffic_condition": "moderate_traffic",
+          "traffic_event": "none"
+        },
+        "note": "导航信息"
+      },
+      {
+        "id": "time1",
+        "category": "time_and_schedule",
+        "type": "schedule.event/schedule.date/schedule.location/schedule_type/schedule_status/reminder_time_minutes_before/is_working_day/is_holiday",
+        "value": {
+          "schedule.event": "通勤",
+          "schedule.date": "2026-01-01",
+          "schedule.location": "杭州",
+          "schedule_type": "work",
+          "schedule_status": "upcoming",
+          "reminder_time_minutes_before": 15,
+          "is_working_day": true,
+          "is_holiday": false
+        },
+        "note": "日程信息"
+      },
+      {
+        "id": "pref1",
+        "category": "user_preference_and_habit",
+        "type": "user_id/preferred_driving_style/preferred_ac_temperature_celsius/preferred_ventilation_mode/preferred_music_genres/preferred_radio_stations/preferred_podcasts/preferred_audiobooks/work_location/home_location",
+        "value": {
+          "user_id": "USR-CHN-633528",
+          "preferred_driving_style": "comfort mode",
+          "preferred_ac_temperature_celsius": 24,
+          "preferred_ventilation_mode": "automatic circulation",
+          "preferred_music_genres": [
+            "pop"
+          ],
+          "preferred_radio_stations": [
+            "FM100"
+          ],
+          "preferred_podcasts": [
+            "播客A"
+          ],
+          "preferred_audiobooks": [
+            "书籍A"
+          ],
+          "work_location": "杭州",
+          "home_location": "杭州"
+        },
+        "note": "用户偏好"
+      },
+      {
+        "id": "comm1",
+        "category": "communication",
+        "type": "phone.search_type/phone.person/phone.telephone/phone.phone_prefix/phone.phone_suffix/incoming_call_display/incoming_call_timestamp",
+        "value": {
+          "phone.search_type": "by_name",
+          "phone.person": "联系人",
+          "phone.telephone": "13800000000",
+          "phone.phone_prefix": "138",
+          "phone.phone_suffix": "0000",
+          "incoming_call_display": "联系人来电",
+          "incoming_call_timestamp": "2026-01-01T08:00:00+08:00"
+        },
+        "note": "通信信息"
+      },
+      {
+        "id": "media1",
+        "category": "entertainment_media",
+        "type": "audio.target_function/audio.position/audio.set_type/audio.value/current_media_type/current_track_title/current_track_artist/volume_level_percent/dark_mode_enabled/screen_brightness_percent/preferred_streaming_platform/spatial_audio_mode/mood_based_music/drive_scene_audio_boost/music_behavior_on_call/nav_music_mix_mode",
+        "value": {
+          "audio.target_function": "music",
+          "audio.position": "all",
+          "audio.set_type": "open",
+          "audio.value": "20",
+          "current_media_type": "music",
+          "current_track_title": "歌曲",
+          "current_track_artist": "歌手",
+          "volume_level_percent": 20,
+          "dark_mode_enabled": true,
+          "screen_brightness_percent": 50,
+          "preferred_streaming_platform": "qqmusic",
+          "spatial_audio_mode": "stereo",
+          "mood_based_music": true,
+          "drive_scene_audio_boost": "auto",
+          "music_behavior_on_call": "pause",
+          "nav_music_mix_mode": "duck"
+        },
+        "note": "娱乐信息"
+      }
+    ]
+  },
+  {
+    "case_id": "case005",
+    "description": "重庆随机驾驶场景，天气为clear，包含通勤或出行任务。",
+    "entities": [
+      {
+        "id": "cabin1",
+        "category": "cabin_internal_perception",
+        "type": "gender/age/safety_seats/non_dangerous behavior/emotion",
+        "value": {
+          "gender": "male",
+          "age": 37,
+          "safety_seats": "fastened",
+          "non_dangerous behavior": [
+            "listening to music"
+          ],
+          "emotion": "calm"
+        },
+        "note": "基础驾驶状态"
+      },
+      {
+        "id": "env1",
+        "category": "cabin_perception",
+        "type": "weather.type/visibility/road_surface.type/temperature_celsius/wind_speed_kmh",
+        "value": {
+          "weather.type": "clear",
+          "visibility": "very_low",
+          "road_surface.type": "wet",
+          "temperature_celsius": 30,
+          "wind_speed_kmh": 22
+        },
+        "note": "环境状态"
+      },
+      {
+        "id": "veh1",
+        "category": "vehicle_basic_info",
+        "type": "vehicle_id/vehicle_model",
+        "value": {
+          "vehicle_id": "重-SUV-2511",
+          "vehicle_model": "suv"
+        },
+        "note": "车辆信息"
+      },
+      {
+        "id": "rtv1",
+        "category": "real_time_vehicle_status",
+        "type": "ac.target_function/ac.position/windows.target_function/windows_status/speed_kmh/range_remaining_km/light_status/ac_temperature_setting_celsius/ventilation_mode",
+        "value": {
+          "ac.target_function": "open",
+          "ac.position": "all",
+          "windows.target_function": "close",
+          "windows_status": "close",
+          "speed_kmh": 53,
+          "range_remaining_km": 103,
+          "light_status": "low beam",
+          "ac_temperature_setting_celsius": 24,
+          "ventilation_mode": "automatic circulation"
+        },
+        "note": "车辆实时状态"
+      },
+      {
+        "id": "nav1",
+        "category": "location_and_navigation",
+        "type": "destination/destination_name/destination_type/distance_to_destination_km/time_to_destination_minutes/route_total_distance_km/distance_traveled_km/waypoint/poi_search_results/traffic_condition/traffic_event",
+        "value": {
+          "destination": "重庆某地址",
+          "destination_name": "目的地",
+          "destination_type": "office",
+          "distance_to_destination_km": 3.5,
+          "time_to_destination_minutes": 32,
+          "route_total_distance_km": 6.9,
+          "distance_traveled_km": 2.7,
+          "waypoint": "城市主干道",
+          "poi_search_results": "停车场,咖啡店",
+          "traffic_condition": "moderate_traffic",
+          "traffic_event": "none"
+        },
+        "note": "导航信息"
+      },
+      {
+        "id": "time1",
+        "category": "time_and_schedule",
+        "type": "schedule.event/schedule.date/schedule.location/schedule_type/schedule_status/reminder_time_minutes_before/is_working_day/is_holiday",
+        "value": {
+          "schedule.event": "通勤",
+          "schedule.date": "2026-01-01",
+          "schedule.location": "重庆",
+          "schedule_type": "work",
+          "schedule_status": "upcoming",
+          "reminder_time_minutes_before": 15,
+          "is_working_day": true,
+          "is_holiday": false
+        },
+        "note": "日程信息"
+      },
+      {
+        "id": "pref1",
+        "category": "user_preference_and_habit",
+        "type": "user_id/preferred_driving_style/preferred_ac_temperature_celsius/preferred_ventilation_mode/preferred_music_genres/preferred_radio_stations/preferred_podcasts/preferred_audiobooks/work_location/home_location",
+        "value": {
+          "user_id": "USR-CHN-121876",
+          "preferred_driving_style": "comfort mode",
+          "preferred_ac_temperature_celsius": 24,
+          "preferred_ventilation_mode": "automatic circulation",
+          "preferred_music_genres": [
+            "pop"
+          ],
+          "preferred_radio_stations": [
+            "FM100"
+          ],
+          "preferred_podcasts": [
+            "播客A"
+          ],
+          "preferred_audiobooks": [
+            "书籍A"
+          ],
+          "work_location": "重庆",
+          "home_location": "重庆"
+        },
+        "note": "用户偏好"
+      },
+      {
+        "id": "comm1",
+        "category": "communication",
+        "type": "phone.search_type/phone.person/phone.telephone/phone.phone_prefix/phone.phone_suffix/incoming_call_display/incoming_call_timestamp",
+        "value": {
+          "phone.search_type": "by_name",
+          "phone.person": "联系人",
+          "phone.telephone": "13800000000",
+          "phone.phone_prefix": "138",
+          "phone.phone_suffix": "0000",
+          "incoming_call_display": "联系人来电",
+          "incoming_call_timestamp": "2026-01-01T08:00:00+08:00"
+        },
+        "note": "通信信息"
+      },
+      {
+        "id": "media1",
+        "category": "entertainment_media",
+        "type": "audio.target_function/audio.position/audio.set_type/audio.value/current_media_type/current_track_title/current_track_artist/volume_level_percent/dark_mode_enabled/screen_brightness_percent/preferred_streaming_platform/spatial_audio_mode/mood_based_music/drive_scene_audio_boost/music_behavior_on_call/nav_music_mix_mode",
+        "value": {
+          "audio.target_function": "music",
+          "audio.position": "all",
+          "audio.set_type": "open",
+          "audio.value": "20",
+          "current_media_type": "music",
+          "current_track_title": "歌曲",
+          "current_track_artist": "歌手",
+          "volume_level_percent": 20,
+          "dark_mode_enabled": true,
+          "screen_brightness_percent": 50,
+          "preferred_streaming_platform": "qqmusic",
+          "spatial_audio_mode": "stereo",
+          "mood_based_music": true,
+          "drive_scene_audio_boost": "auto",
+          "music_behavior_on_call": "pause",
+          "nav_music_mix_mode": "duck"
+        },
+        "note": "娱乐信息"
+      }
+    ]
+  }
+]
