@@ -114,4 +114,4 @@ data/analyze/final_report.md + figures/
 
 ## 许可证
 
-如需开源发布，请自行添加 LICENSE 文件。
+本项目采用 [MIT License](LICENSE)，允许商用、修改与再分发；使用时需保留版权声明。
